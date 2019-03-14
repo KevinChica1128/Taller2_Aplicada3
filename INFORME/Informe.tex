@@ -1,0 +1,680 @@
+% -------------------------------------------------------------------------------------
+% Plantilla de un artículo para publicar en la Revista Colombiana de Estadística
+% *************************************************************************************
+% -------------------------------------------------------------------------------------
+% Establecer primero el idioma principal del artículo, por defecto es español; para
+% utilizar otro idioma, cambiar el comando "\documentclass{revcoles}" por el comando
+% "\documentclass[english]{revcoles}" o por "\documentclass[portuguese]{revcoles}"
+% **** --------------------------------------------------------------------------------
+\documentclass[report,oneside]{revcoles}
+\usepackage{float}
+\usepackage{multicol}
+\usepackage[latin1]{inputenc}
+\usepackage[top=2cm,bottom=1cm,left=1cm,right=1cm]{geometry}
+\labeldocument[
+university = Universidad del Valle,
+program = Programa Académico de Estadística,
+subject = Estadística Aplicada III,
+city = Cali,
+month = 3,
+year = 2019]
+
+% -------------------------------------------------------------------------------------
+% Espacio reservado para la carga de los paquetes por parte del autor
+% **** --------------------------------------------------------------------------------
+
+
+
+
+% //// --------------------------------------------------------------------------------
+% -------------------------------------------------------------------------------------
+% Espacio reservado para colocar las definiciones especiales por parte del autor
+% **** --------------------------------------------------------------------------------
+
+
+
+% //// --------------------------------------------------------------------------------
+% -------------------------------------------------------------------------------------
+% Espacio utilizado para colocar las palabras que necesitan partición silábica
+% **** --------------------------------------------------------------------------------
+\hyphenation{Colombia mul-ti-va-ria-do pro-ba-bi-li-dad es-ta-d\'{i}s-ti-ca}
+% //// --------------------------------------------------------------------------------
+\begin{document}
+
+% -------------------------------------------------------------------------------------
+% Espacio reservado para ingresar el título del artículo
+% "maintitle = " título original del artículo
+% "secondtitle = " título del artículo traducido al idioma alterno
+% "shorttitle = " título corto (opcional) para el encabezado
+% **** --------------------------------------------------------------------------------
+\title[maintitle = {Diseño Completamente Aleatorizado},
+       %secondtitle = Template for report in a course,
+       shorttitle = Taller DCA
+]
+% //// --------------------------------------------------------------------------------
+% -------------------------------------------------------------------------------------
+% Espacio reservado para ingresar el(los) autor(es) del artículo de forma individual.
+% opción "firstname = " nombres completos de cada autor
+% opción "surname = " primer apellido de cada autor
+% opción "numberinstitution = " número que identifica la institución a la que pertenece
+%         el autor, en caso de haber solo una institución el campo se elimina
+% opción "affiliation = " afiliación o cargo que desempeña el autor en la institución
+% opción "email = " dirección electrónica del autor (preferiblemente institucional)
+% **** --------------------------------------------------------------------------------
+\begin{authors}
+\author[firstname = Kevin Steven,
+        surname = García,
+        code = Código: 1533173,
+        email = kevin.chica@correounivalle.edu.co,
+]
+\author[firstname = Alejandro,
+        surname = Vargas,
+        code = Código: 1525953  ,
+        email = jose.alejandro.vargas@correounivalle.edu.co
+]
+\author[firstname = Alejandro,
+        surname = Soto,
+        code = Código: 1532457 ,
+        email = asotomurillo@gmail.com 
+]
+\end{authors}
+% //// --------------------------------------------------------------------------------
+% -------------------------------------------------------------------------------------
+% Espacio reservado para ingresar la información de la(s) institución(es) a la(s)
+% cual(es) pertenece(n) el(los) autor(es)
+% Usar un comando "\institute"  por cada una de las diferentes instituciones.
+% Los campos "subdivision" y "division" son opcionales
+% Los campos "institution", "city" y "country" son obligatorios
+% **** --------------------------------------------------------------------------------
+\begin{comment}
+\begin{institutions}
+     \institute[subdivision = Departamento de Estadística,
+                division = Facultad de Ciencias,
+                institution = Universidad del Valle,
+                city = Cali,
+                country = Colombia]
+\end{institutions}
+\end{comment}
+% //// --------------------------------------------------------------------------------
+% -------------------------------------------------------------------------------------
+% CUERPO DEL DOCUMENTO
+% **** --------------------------------------------------------------------------------
+% -------------------------------------------------------------------------------------
+% Espacio reservado para colocar el resumen en el idioma principal y las palabras clave
+% !!No dejar salto de línea entre el resumen y el comando \keywords{.}¡¡
+% **** --------------------------------------------------------------------------------
+\begin{comment}
+\begin{mainabstract}
+Este documento contiene las instrucciones de presentación de los
+trabajos de cursos. Este texto está escrito utilizando \LaTeX\
+como editor según formato adjunto (archivo \emph{Template for Report.tex})
+y puede utilizarse como guía, reemplazando este contenido. Se requieren los
+archivos \emph{revcoles.cls}, \emph{references.bib} y \emph{graph\_example.eps}.%
+%
+\keywords{Formato en \LaTeX\ para documentos, carrera de Estadística}
+\end{mainabstract}
+\end{comment}
+% //// --------------------------------------------------------------------------------
+% -------------------------------------------------------------------------------------
+% Espacio reservado para colocar el resumen en el idioma secundario y las palabras clave
+% !!No dejar salto de línea entre el resumen y el comando \keywords{.}¡¡
+% **** --------------------------------------------------------------------------------
+\begin{comment}
+\begin{secondaryabstract}
+This document gives the instructions to prepare a \LaTeX\ version of the graduation project of undergraduate in
+Statistics to first semester of 2008. The document is written using a \LaTeX\ format (file \emph{Plantilla para trabajo
+de grado.tex}) and can be used as a guideline just replacing its contents. It is necessary to use also the files
+\emph{revcoles.cls}, \emph{references.bib} and \emph{graph\_example.eps}.
+%
+\keywords{\LaTeX\ format for documents, undergraduate in Statistics}
+\end{secondaryabstract}
+
+\end{comment}% //// --------------------------------------------------------------------------------
+% -------------------------------------------------------------------------------------
+% Título de la primera sección
+% **** --------------------------------------------------------------------------------
+
+\section{Punto 1}
+~\\Un fabricante supone que existe diferencias en el contenido de calcio en lotes de materia prima que le son suministrados por su proveedor. Actualmente hay una gran cantidad de lotes en la bodega. Cinco (5) lotes son seleccionados. Un químico realiza 5 pruebas a cada lote y obtiene los siguientes resultados:
+
+\begin{center}
+\begin{tabular}{ccccc}
+\hline 
+LOTE 1 & LOTE 2 & LOTE 3 & LOTE 4 & LOTE 5 \\ 
+\hline 
+23.46 & 23.59 & 23.51 & 23.28 & 23.29\\
+23.48 & 23.46 & 23.64 & 23.4  & 23.46\\
+23.56 & 23.42 & 23.46 & 23.37 & 23.37\\
+23.39 & 23.49 & 23.52 & 23.46 & 23.32\\
+23.4  & 23.5  & 23.49 & 23.39 & 23.38\\
+\hline 
+\end{tabular} 
+\end{center}
+
+\begin{itemize}
+\item[a.]
+\begin{itemize}
+\item[-]Unidad experimental: Materia prima
+\item[-]Factor: Lote
+\item[-]Niveles: Lote 1, Lote 2, Lote 3, Lote 4 y lote 5
+\item[-]Tratamientos: Lote 1, Lote 2, Lote 3, Lote 4 y lote 5
+\item[-]Variable de respuesta: Contenido de calcio
+\end{itemize}
+
+\item[b.]
+~\\El diseño completamente aleatorizado es adecuado en esta situación, ya que se quiere analizar si existen diferencias entre los lotes de materia prima en cuanto a la concentración de calcio, es decir se investiga el efecto de un factor(lote) con a(5) niveles (o a(5) tratamientos) sobre una variable de respuesta que es contenido de calcio; además, como los lotes son de la misma materia prima y el mismo proveedor, también se podría suponer que las unidades experimentales son homogéneas y, finalmente, de una gran cantidad de lotes se seleccionaron 5 de ellos, es decir, se realizó un proceso de aleatorización en la asignación de unidades experimentales cumpliendo con las 4 características principales del DCA.
+
+\item[c.]
+~\\\textbf{Estadísticas descriptivas:}
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+\hline 
+  & Mín & Q1 & Mediana & Media & Q3 & Máx & Des. Estándar & CV(\%)  \\ 
+\hline 
+Lote 1 & 23.39 & 23.4 & 23.46 & 23.458 & 23.48 & 23.56 & 0.068702256 & 0.29287346 \\
+Lote 2 & 23.42 & 23.46 & 23.49 & 23.492 & 23.5 & 23.59 & 0.063007936 & 0.26821018 \\
+Lote 3 & 23.46 & 23.49 & 23.51 & 23.524 & 23.52 & 23.64 & 0.068774995 & 0.29236097 \\
+Lote 4 & 23.28 & 23.37 & 23.39 & 23.38 & 23.4 & 23.46 & 0.065192024 & 0.27883672 \\
+Lote 5 & 23.29 & 23.32 & 23.37 & 23.364 & 23.38 & 23.46 & 0.06503845 & 0.27837036 \\
+\hline 
+\end{tabular} 
+\end{center}
+~\\En la tabla anterior, se podría decir a priori, que no se aprecian diferencias significativas entre los lotes en cuanto a la cantidad de calcio que presentan. Todas tienen valores muy parecidos en cada uno de los estadísticos obtenidos. Poseen casi la misma media, mediana y desviación.
+
+\pagebreak
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale=0.35]{FigurasUV/D1.pdf}
+\end{figure}
+~\\En ésta gráfica dado que el eje y reduce demasiado su escala, se pueden apreciar diferencias decimales, y se observa que en decimales, el lote 1, 2 y 3 son parecidos, siendo el 3 el que más calcio contiene, y los lotes 4 y 5 son casi iguales, y tienen menor calcio que los otros 3 lotes.
+
+\item[d.]
+~\\Se plantea el siguiente modelo:
+\begin{center}
+$y_{ij}=\mu+\tau_i+\varepsilon_{ij}$ \;\;\; $i=1,...,5$ \;\;\; $j=1,...,5$
+\end{center}
+~\\El cuál se construye bajo los siguientes supuestos:
+\begin{center}
+$\varepsilon_{ij}\approx N(0,\sigma^2),\;\; E[\varepsilon_{ij}]=0 \;\;\; \forall_{ij}, \;\; V[\varepsilon_{ij}]=\sigma^2, \;\; cov[\varepsilon_{ij},\varepsilon_{i'j'}]=0$
+\end{center}
+~\\Donde:
+~\\$y_{ij}=$Cantidad de calcio en la j-ésima prueba del lote i.
+~\\$\mu=$Media general de contenido de calcio por lote sin tener en cuenta el tipo de lote.
+~\\$\tau_i=$Efecto del i-ésimo lote sobre el contenido de calcio.
+~\\$\varepsilon_{ij}=$Error aleatorio debido al i-ésimo lote en la j-ésima réplica.
+\item[e.]
+~\\Planteamos la siguiente hipótesis:
+\begin{center}
+~\\$H_0:$No hay un efecto del factor de tratamiento(lote) sobre la cantidad de calcio.
+~\\$H_1:$Al menos uno de los tratamientos(lote) tiene un efecto significativo sobre la cantidad de calcio.
+\end{center}
+\item[f.]
+~\\Antes de realizar la ANOVA e interpretar los resultados, se comprobarán los supuestos del modelo para saber si las interpretaciones que obtengamos si van a ser correctas.
+~\\Sobre los errrores se tienen los siguientes supuestos:
+$$\varepsilon_{ij}\approx N(0,\sigma^2)  \rightarrow \;\; Normalidad$$
+$$ E[\varepsilon_{ij}]=0 \;\;\; \forall_{ij} \rightarrow \;\; Correcta\; especificacion$$
+$$V[\varepsilon_{ij}]=\sigma^2 \;\;\; \forall_{ij}\rightarrow \;\; Homocedasticidad$$ 
+$$cov[\varepsilon_{ij},\varepsilon_{i'j'}]=0 \;\;\; \forall_{i\neq i'}  \;\; \wedge \;\;\; \forall_{j\neq j'} \rightarrow \;\; Independencia$$
+
+\begin{itemize}
+\item[-]Normalidad: Para probar el supuesto de normalidad, se realizarán dos pruebas gráficas (histograma y QQ-plot) y una prueba estadística(Shapiro Wilk).
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale=0.35]{FigurasUV/N1.pdf}
+\end{figure}
+~\\En estas gráficas se podría pensar que el supuesto no se cumple, ya que la cola derecha de la distribución se sale de los intervalos de confianza de la recta de cuantiles teórica de la distribución normal. Sin embargo, las pruebas gráficas no son muy convincentes ya que su interpretación puede ser distinta de una persona a otra y depende mucho de la experiencia del investigador. Por ello se acude a la prueba formal.
+ 
+\item[*]Test Shapiro-Wilk:$$H_0:Los\; datos\; provienen\; de\; una\; distribucion\; normal$$
+$$H_a:Los\; datos\; no\; provienen\; de\; una\; distribucion\; normal$$
+$$W = 0.93593, p-value = 0.1192$$
+
+~\\Como el p-valor=0.1192 es superior a nuestro nivel de significancia $\alpha=0.05$, no se rechaza la hipótesis nula, y concluimos que no hay evidencia estadística suficiente para decir que los datos no provienen de una distribución normal, lo que nos indica que este supuesto de normalidad en los errores no se incumple.
+\item[-]Correcta Especificación:Sabemos que este supuesto siempre se cumple, ya que el método o la construcción del modelo asegura que la esperanza de los residuales sea igual a cero, sin embargo, se realizó una prueba t para comprobarlo.
+
+\item[*]T-test:$$H_0: La\; verdadera\; media\; es\; igual\; a\; 0 $$
+$$H_a:La\; verdadera\; media\; no\; es\; igual\; a\; 0$$
+$$t = 1.9109e-16, df = 24, p-value = 1$$
+~\\Como el p-valor=1 es superior a nuestro nivel de significancia $\alpha=0.05$, no se rechaza la hipótesis nula, y se verifica lo dicho anteriormente. 
+
+
+\item[-]Homocedasticidad:Para analizar la homocedasticidad se realizó una prueba gráfica(valores ajustados vs residuos) y una prueba estadísticas(Test de Barlett)
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale=0.35]{FigurasUV/H1.pdf}
+\end{figure}
+~\\En esta gráfica se confirma o dicho en las estadísticas descriptivas, las varianzas entre los residuos de cada factor son muy parecidas. Claramente se ve que se cumple el supuesto de homocedasticidad, sin embargo se realiza la prueba formal, la cual se espera que tenga un p valor bastante alto, por la evidencia que se tiene.
+
+\item[*]Prueba de Barlett:$$H_0:Las\;varianzas\;de\;todos\;los\;grupos\;son\;iguales$$
+$$H_a:Al\;menos\;una\;de las\; varianzas\;es\;diferente$$
+$$Bartlett's \; K-squared = 0.042264, df = 4, p-value = 0.9998$$
+
+~\\Como el p-valor=0.9998 es superior a nuestro nivel de significancia $\alpha=0.05$, no se rechaza la hipótesis nula, y concluimos que no hay evidencia estadística suficiente para decir que al menos entre dos grupos la varianza es diferente, lo que nos indica que este supuesto de homocedasticidad en los errores no se incumple.
+
+
+\item[-]Independencia:Para probar el supuesto de independencia en los errores, no se debe realizar un correlograma o una prueba sobre la autocorrelación(prueba de Durbin-Watson) ya que estas dependen del orden en el cuál se obtuvieron los datos, y esa información no se tiene, por lo tanto, solo se realizará una prueba de rachas.
+
+\item[*]Test de rachas: $$H_0:La \; muestra\; es\; aleatoria\; (las \; observaciones \;son \; independientes)$$
+$$H_a:La \; muestra\; no \;es\; aleatoria\; (las \; observaciones \; no\;son \; independientes)$$
+$$Standard \; Normal = 0.62212, p-value = 0.5339$$
+~\\Como el p valor=0.62212 es mayor que nuestro nivel de significancia $\alpha=0.05$, no rechazamos la hipótesis nula y concluimos que no hay evidencia estadística suficiente para decir que los residuales no están distribuidos de manera aleatoria, en otras palabras, no podemos decir que no son independientes. Teniendo en cuenta esto, podemos decir que este supuesto de independencia en los errores parece no incumplirse.
+\end{itemize}
+~\\Ya que según las pruebas aplicadas, ninguno de los supuestos se incumple, procedemos a realizar e interpretar la ANOVA:
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+ &Df&  Sum Sq& Mean Sq &F value & Pr(>F)\\   
+\hline 
+Lote      &   4& 0.09698& 0.02424&   5.535& 0.00363**\\ 
+Residuals &  20& 0.08760& 0.00438&  &  \\        
+\hline 
+\end{tabular} 
+\end{center} 
+~\\Podemos ver que el p valor=0.00363 es inferior a nuestro nivel de significancia $\alpha=0.05$, por lo cual se rechaza $H_0$ planteada en el item e, y concluimos que al menos uno de los tratamientos(lote) tiene un efecto significativo sobre la cantidad de calcio.
+
+\item[g.]Se realizará la prueba postanova de Fisher, ya que queremos maximizar la probabilidad de encontrar diferencias significativas, y ésta, al ser no conservadora, tiende a rechazar más hipótesis nulas.Los resultados resumidos para esta prueba son:
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+     &  Calcio& groups\\
+\hline
+Lote 3& 23.524&      a\\
+Lote 2& 23.492&      a\\
+Lote 1& 23.458&     ab\\
+Lote 4& 23.380&     bc\\
+Lote 5& 23.364&      c\\
+\hline
+\end{tabular}
+\end{center}
+~\\Los tratamientos con la misma letra no son significativamente diferentes. Es decir, los lotes 3 y 2 no son significativamente diferentes, siendo estos, los que más contenido de calcio tienen. El lote 1 no es significativamente diferentes a los dos lotes mencionados anteriormente, sin embargo, tampoco es diferente al lote 4, esto se podría interpretar como que este lote 1 tiene una cantidad de calcio promedio, lo cual se observa en la gráfica del item c. El lote 4 es diferente a los lotes 3 y 2(presenta una cantidad de calcio inferior), y es estadísticamente igual a los lotes 1 y 5. Finalmente el lote 5 es diferente a los lotes 3,2 y 1, y semejante al lote 4, siendo este, el que menor cantidad de calcio presenta. 
+
+\item[h.]Las conclusión principal que se obtiene es que la suposición del fabricante sobre la existencia de diferencias en el contenido de calcio en los lotes de materia prima resulto ser cierta, en la ANOVA se detectó que al menos uno de los lotes difiere en cuanto al contenido de calcio. Posteriormente en la prueba postanova de Fisher, se observó que los lotes 3 y 2 son los que más contenido de calcio presentan, el lote 1 presenta un contenido de calcio promedio, y los lotes 4 y 5 son los que menor contenido de calcio tienen. Si nos vamos al contexto de los datos, los resultados nos están diciendo que existen diferencias estadisticamente significativas, sin embargo, estas diferencias pueden no ser grandes para el fabricante, ya que se detectaron diferencias decimales.Entonces queda a decisión del fabricante si realmente acepta la decisión o si por el contrario, las diferencias no le parecen significativas dentro del contexto.
+
+\item[i.]Cuando no se cumple el supuesto de normalidad se realiza la prueba no Paramétrica de Kruskal-Wallis para darnos cuenta si la cantidad de calcio difiere en los diferentes lotes. Los resultados para esta prueba son:
+\item[*]Prueba de Kruskal-Wallis:$$H_0: Las\; 5\; medianas\; son\; todas\; iguales\;$$
+$$H1: Al\; menos\; una\; de\; las\; medianas\; es\; diferente\; $$
+$$Kruskal-Wallis\; chi-squared = 14.441, df = 4, p-value = 0.006013$$
+~\\Dado que el p valor=0.006013 es menor que nuestro nivel de significancia $\alpha=0.05$,se rechaza $H_0$ y concluimos que hay evidencia estadística suficiente para decir que los lotes presentan diferencias en la cantidad de calcio en cuanto a sus medianas.
+~\\Se puede observar que cuando realizamos la ANOVA, bajo el supuesto de normalidad, la hipótesis de que los efectos de los lotes de materia prima en la cantidad de calcio es la misma, también se rechazaba a un nivel de significancia $\alpha=0.05$. Ahora para la comparación dado que la variable de respuesta tiene empates, se tienen los siguientes resultados:
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+     &Lote 1 &Lote 2& Lote 3& Lote 4\\
+\hline
+Lote 2& 0.973&  -   &   -   &   -   \\  
+Lote 3& 0.805&  0.989&  -   &   -   \\  
+Lote 4& 0.696&  0.303&  0.106&  -   \\  
+Lote 5& 0.523&  0.180&  0.052&  0.999\\ 
+\hline
+\end{tabular}
+\end{center}
+~\\Aquí podemos ver una contradicción entre la prueba de Kruskal-Wallis y las comparaciones por pares usando Nemenyi-test con Chi-cuadrado, ya que la primera nos dice que si existen diferencias entre las cantidades de calcio de los lotes, pero cuando hacemos las comparaciones entre todos los lotes vemos que todos los p valores son superiores a nuestro nivel de significancia $\alpha=0.05$, la cuál no nos detecta diferencias entre los pares de lotes.
+
+\end{itemize}
+
+\section{Punto 2}
+~\\En una planta industrial se desea determinar si diferentes trabajadores con el mismo nivel de habilidad
+tienen algún efecto sobre el número de unidades que se espera que produzcan durante un periodo fijo.
+Se lleva a cabo un experimento en el que se seleccionan al azar 5 trabajadores y se observa el número
+de unidades que cada uno produce en seis periodos con la misma duración, produciéndose los
+siguientes resultados.
+
+\begin{center}
+\begin{tabular}{ccccc}
+\hline 
+&&TRABAJADOR&\\
+\hline 
+ 1 &  2 &  3 &  4 &  5 \\ 
+\hline 
+45& 52& 39& 57& 48 \\
+47& 55& 37& 49& 44 \\
+43& 58& 46& 52& 55 \\
+48& 49& 45& 50& 53 \\
+50& 47& 42& 48& 49 \\
+44& 57& 41& 55& 52\\
+\hline 
+\end{tabular} 
+\end{center}
+
+\begin{itemize}
+\item[a.]
+\begin{itemize}
+\item[-]Unidad experimental: Trabajadores
+\item[-]Factor: Trabajador
+\item[-]Niveles: Trabajador 1, Trabajador 2, Trabajador 3, Trabajador 4 y Trabajador 5
+\item[-]Tratamientos: Trabajador 1, Trabajador 2, Trabajador 3, Trabajador 4 y Trabajador 5
+\item[-]Variable de respuesta: Unidades por periodo
+\end{itemize}
+
+\item[b.]
+~\\El diseño completamente aleatorizado es adecuado en esta situación, ya que para comenzar vemos que se obtuvieron 5 trabajadores completamente aleatorios, todos con igual probabilidad de salir lo que nos garantiza la homogeneidad de las unidades experimentales,y como se investiga el hecho de que trabajadores con habilidades iguales tengan diferencias en la cantidad de unidades que producen cada uno podemos decir que tenemos las características necesarias para un DCA.
+
+\item[c.]
+~\\\textbf{Estadísticas descriptivas:}
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+\hline 
+  & Mín & Q1 & Mediana & Media & Q3 & Máx & Des. Estándar & CV(\%)  \\ 
+\hline 
+Trabajador 1 & 43 & 44.25 & 46 & 46.17 & 47.75 & 50 & 1.832947 & 3.970283 \\
+Trabajador 2 & 47 & 49.75 & 53.50 & 53 & 56.50 & 58 & 3.074437 & 5.800824 \\
+Trabajador 3 & 37 & 39.50 & 41.50 & 41.67 & 44.25 & 46 & 2.392224 & 5.741338 \\
+Trabajador 4 & 48 & 49.25 & 51 & 51.83 & 54.25 & 57 & 2.461770 & 4.749396 \\
+Trabajador 5 & 44 & 48.25 & 50.50 & 50.17 & 52.75 & 55 & 2.757449 & 5.496576 \\
+\hline 
+\end{tabular} 
+\end{center}
+~\\En la tabla anterior, se puede apreciar a priori que hay trabajadores los cuales producen mas unidades que otros en cuanto a la media y mediana, por ejemplo los trabajadores 2,4 y 5, también se observan diferencias importantes en el mínimo y máximo de la cantidad de unidades que producen en un periodo, los trabajadores 2 y 4 tienen un mínimo y máximo mayor a los de los demás. Finalmente, el trabajador 2 es el que mayor desviación estándar presenta, por lo que se podría pensar que su producción es un poco menor regular y constante que la de los demás. 
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale=0.4]{FigurasUV/D2.pdf}
+\end{figure}
+~\\En esta gráfica podemos apreciar como los trabajadores 2 y 4 son los que mayor cantidad de unidades producen en un periodo, por otra parte el trabajador 3 se queda muy por debajo del resto, el 1 y el 5 tienen un comportamiento similar.
+
+\item[d.]
+~\\Se plantea el siguiente modelo:
+\begin{center}
+$y_{ij}=\mu+\tau_i+\varepsilon_{ij}$ \;\;\; $i=1,...,5$ \;\;\; $j=1,...,5$
+\end{center}
+~\\El cuál se construye bajo los siguientes supuestos:
+\begin{center}
+$\varepsilon_{ij}\approx N(0,\sigma^2),\;\; E[\varepsilon_{ij}]=0 \;\;\; \forall_{ij}, \;\; V[\varepsilon_{ij}]=\sigma^2, \;\; cov[\varepsilon_{ij},\varepsilon_{i'j'}]=0$
+\end{center}
+~\\Donde:
+~\\$y_{ij}=$Numero de unidades producidas en el j-ésimo periodo por el trabajador i.
+~\\$\mu=$Media general sin tener en cuenta el trabajador.
+~\\$\tau_i=$Efecto del i-ésimo trabajador sobre la cantidad de unidades.
+~\\$\varepsilon_{ij}=$Error aleatorio debido al i-ésimo trabajador en la j-ésima réplica.
+\item[e.]
+~\\Planteamos la siguiente hipótesis:
+\begin{center}
+~\\$H_0:$No hay un efecto del factor de tratamiento(trabajador) sobre la cantidad de unidades.
+~\\$H_1:$Al menos uno de los tratamientos(trabajadores) tiene un efecto significativo sobre la cantidad de unidades.
+\end{center}
+\item[f.]
+~\\Antes de realizar la ANOVA e interpretar los resultados, se comprobarán los supuestos del modelo para saber si las interpretaciones que obtengamos si van a ser correctas.
+~\\Sobre los errrores se tienen los siguientes supuestos:
+$$\varepsilon_{ij}\approx N(0,\sigma^2)  \rightarrow \;\; Normalidad$$
+$$ E[\varepsilon_{ij}]=0 \;\;\; \forall_{ij} \rightarrow \;\; Correcta\; especificacion$$
+$$V[\varepsilon_{ij}]=\sigma^2 \;\;\; \forall_{ij}\rightarrow \;\; Homocedasticidad$$ 
+$$cov[\varepsilon_{ij},\varepsilon_{i'j'}]=0 \;\;\; \forall_{i\neq i'}  \;\; \wedge \;\;\; \forall_{j\neq j'} \rightarrow \;\; Independencia$$
+
+\begin{itemize}
+\item[-]Normalidad: Para probar el supuesto de normalidad, se realizarán dos pruebas gráficas (histograma y QQ-plot) y una prueba estadística(Shapiro Wilk).
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale=0.35]{FigurasUV/N2.pdf}
+\end{figure}
+~\\En las gráficas no se observa un incumplimiento claro de este supuesto, por lo que se acude a la prueba formal.
+
+\item[*]Test Shapiro-Wilk:$$H_0:Los\; datos\; provienen\; de\; una\; distribucion\; normal$$
+$$H_a:Los\; datos\; no\; provienen\; de\; una\; distribucion\; normal$$
+$$W = 0.95503, p-value = 0.2301$$
+
+~\\Como el p-valor=0.2301 es superior a nuestro nivel de significancia $\alpha=0.05$, no se rechaza la hipótesis nula, y concluimos que no hay evidencia estadística suficiente para decir que los datos no provienen de una distribución normal, lo que nos indica que este supuesto de normalidad en los errores no se incumple.
+\item[-]Correcta Especificación:Sabemos que este supuesto siempre se cumple, ya que el método o la construcción del modelo asegura que la esperanza de los residuales sea igual a cero, sin embargo, se realizó una prueba t para comprobarlo.
+
+\item[*]T-test:$$H_0: La\; verdadera\; media\; es\; igual\; a\; 0 $$
+$$H_a:La\; verdadera\; media\; no\; es\; igual\; a\; 0$$
+$$t = -6.5635e-17, df =29, p-value = 1$$
+~\\Como el p-valor=1 es superior a nuestro nivel de significancia $\alpha=0.05$, no se rechaza la hipótesis nula, y se verifica lo dicho anteriormente. 
+
+
+\item[-]Homocedasticidad:Para analizar la homocedasticidad se realizó una prueba gráfica(valores ajustados vs residuos) y una prueba estadísticas(Test de Barlett)
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale=0.35]{FigurasUV/H2.pdf}
+\end{figure}
+~\\Al igual que en el punto 1, las varianzas entre los residuos de cada factor son muy parecidas. Claramente se ve que se cumple el supuesto de homocedasticidad, sin embargo se realiza la prueba formal, la cual se espera que tenga un p valor bastante alto, por la evidencia que se tiene.
+
+\item[*]Prueba de Barlett:$$H_0:Las\;varianzas\;de\;todos\;los\;grupos\;son\;iguales$$
+$$H_a:Al\;menos\;una\;de las\; varianzas\;es\;diferente$$
+$$Bartlett's \; K-squared = 1.2939, df = 4, p-value = 0.8624$$
+
+~\\Como el p-valor=0.8624 es superior a nuestro nivel de significancia $\alpha=0.05$, no se rechaza la hipótesis nula, y concluimos que no hay evidencia estadística suficiente para decir que al menos entre dos grupos la varianza es diferente, lo que nos indica que este supuesto de homocedasticidad en los errores no se incumple.
+
+
+\item[-]Independencia:Para probar el supuesto de independencia en los errores, no se debe realizar un correlograma o una prueba sobre la autocorrelación(prueba de Durbin-Watson) ya que estas dependen del orden en el cuál se obtuvieron los datos, y esa información no se tiene, por lo tanto, solo se realizará una prueba de rachas.
+
+\item[*]Test de rachas: $$H_0:La \; muestra\; es\; aleatoria\; (las \; observaciones \;son \; independientes)$$
+$$H_a:La \; muestra\; no \;es\; aleatoria\; (las \; observaciones \; no\;son \; independientes)$$
+$$Standard \; Normal = 1.4864, p-value =0.1372$$
+~\\Como el p valor=0.1372 es mayor que nuestro nivel de significancia $\alpha=0.05$, no rechazamos la hipótesis nula y concluimos que no hay evidencia estadística suficiente para decir que los residuales no están distribuidos de manera aleatoria, en otras palabras, no podemos decir que no son independientes. Teniendo en cuenta esto, podemos decir que este supuesto de independencia en los errores parece no incumplirse.
+\end{itemize}
+~\\Ya que según las pruebas aplicadas, ninguno de los supuestos se incumple, procedemos a realizar e interpretar la ANOVA:
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+ &Df&  Sum Sq& Mean Sq &F value & Pr(>F)\\   
+\hline 
+Trabajador      &   4& 517.5& 129.38&   9.689& 7.11e-05***\\ 
+Residuals &  25&333.8& 13.35&  &  \\        
+\hline 
+\end{tabular} 
+\end{center} 
+~\\Podemos ver que el p valor=7.11e-05 es muy inferior a nuestro nivel de significancia $\alpha=0.05$, por lo cual se rechaza $H_0$ planteada en el item e, y concluimos que al menos uno de los tratamientos(trabajador) tiene un efecto significativo sobre la cantidad de unidades producidas.
+
+\item[g.]Se realizará la prueba postanova de Fisher, ya que queremos maximizar la probabilidad de encontrar diferencias significativas, y ésta, al ser no conservadora, tiende a rechazar más hipótesis nulas.Los resultados resumidos para esta prueba son:
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+     &  C/unidades& groups\\
+\hline
+Trabajador 3& 41.7&      a\\
+Trabajador 1& 46.2&      ab\\
+Trabajador 5& 50.2&     bc\\
+Trabajador 4& 51.8&     bc\\
+Trabajador 2& 53.0&      c\\
+\hline
+\end{tabular}
+\end{center}
+~\\Los tratamientos con la misma letra no son significativamente diferentes. Es decir, los Trabajadores 2 4 y 5 no son significativamente diferentes, siendo estos, los que más unidades producen por periodo. El trabajador 1  no es significativamente diferentes a los trabajadores 5 y 4, sin embargo, tampoco es diferente al trabajador 3, esto se podría interpretar como que el trabajador 1 produce una cantidad de unidades promedio, lo cual se observa en la gráfica del item c. El trabajador 2 es diferente a los trabajadores 3 y 1 ya que produce muy por arriba de estos, y es estadísticamente igual a los lotes 5 y 4. 
+
+\item[h.]Como conclusiones en este item 2 podemos decir que así los trabajadores tengan las mismas habilidades hay unos que logran producir mas que otros, así pues la hipótesis del investigador de que existen diferencias significativas entre las cantidades producidas por los diferentes trabajadores parece cumplirse, siendo ademas el trabajador 2 el que mas unidades en promedio logra producir y el trabajador 3 el menos productivo de todos,La prueba post-anova detecto que no hay mucha diferencia entre los trabajadores 2,4 y 5 por lo que se podría decir en principio que estos son igual de productivos, tampoco hay diferencias entre los trabajadores 1,5 y 4 esto indica que el trabajador 1 también es productivo pero se queda por debajo de sus colegas, sin embargo el trabajador 3 es el que menos cantidad de unidades produce por periodo.
+
+\item[i.]Cuando no se cumple el supuesto homogeneidad de varianza utilizamos el modelo de minimos cuadrados generalizados para ver si existen diferencias entre los rabajadores en cuanto a la cantidad de unidades que produc cada uno . Los resultados son:
+\item[*]ANOVA:
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+ &Df&   F value & p-value\\   
+\hline 
+Intercept      &   1&  5774.358&<.0001\\ 
+Trabajador &  4& 9.873&1e-04    \\        
+\hline 
+\end{tabular} 
+\end{center} 
+~\\Podemos ver que la ANOVA por el método de mínimos cuadrados generalizados coincide al encontrar diferencias significativas entre los trabajadores, por lo que es posible concluir que existen trabajadores con iguales habilidades que logran producir mas y otros menos cantidades de unidades por periodo.
+
+~\\Para comparar por pares, se realizó la prueba de comparación la cual arrojó los siguientes resultados:
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+trabajador & lsmean  & SE &df& lower.CL& upper.CL& group\\
+\hline
+ 3       &     41.7& 1.49& 25&     38.6&     44.7&  a\\    
+ 1       &     46.2& 1.49& 25&     43.1&     49.2&  ab \\  
+ 5       &     50.2& 1.49& 25&     47.1&     53.2&   bc \\ 
+ 4       &     51.8& 1.49& 25&     48.8&     54.9&   bc \\ 
+ 2       &     53.0& 1.49& 25&     49.9&     56.1&    c \\ 
+\hline
+\end{tabular}
+\end{center}
+~\\Podemos ver que coincide totalmente con la prueba postanova de Fisher del item g. Por lo cuál se tienen las mismas interpretaciones.
+
+~\\Para comprar los dos modelos usamos:
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+Modelo &Df&   AIC &BIC&logLik\\   
+\hline 
+Homogéneo   &   6&  169.4196&177.8268&-78.70982\\ 
+Heterogéneo &  10& 175.7427&189.7547&-77.87137    \\        
+\hline 
+\end{tabular} 
+\end{center} 
+~\\Como podemos apreciar el primer modelo es el que mejor ajuste tiene, presenta un menor AIC y BIC, como este supuesto se cumple, era lógico el resultado de que el modelo con homogeneidad en varianza es el mejor en este caso, sin embargo ambos modelos arrojaron que existen diferencias significativas entre los tratamientos (Trabajadores).
+
+\end{itemize}
+
+
+\section{Punto 3}
+~\\Los datos de la tabla siguiente representan la resistencia al machacado de tres materiales (M1, M2, M3) al tratarlos con cuatro productos químicos (A, B, C, D). Existe evidencia de diferencias en la resistencia media   entre los cuatro productos químicos? 
+
+\begin{center}
+\begin{tabular}{|c|ccc|}
+\hline 
+PRODUCTO QUÍMICO &  & MATERIAL &  \\ 
+\hline
+& M1 & M2 & M3 \\
+\hline
+A & 5 & 9 & 7 \\
+B & 3 & 8 & 4  \\
+C & 8 & 13 & 9 \\
+D & 4 & 6 & 8 \\
+\hline 
+\end{tabular} 
+\end{center} 
+
+\begin{itemize}
+\item[a.]
+\begin{itemize}
+\item[-]Unidad experimental: Los materiales M1, M2, M3.
+\item[-]Factor: Tratamiento con los productos químicos (A,B,C,D)
+\item[-]Niveles: Productos químicos A, B, C, D
+\item[-]Tratamientos: Productos químicos A, B, C, D
+\item[-]Variable de respuesta: Resistencia al machacado
+\end{itemize}
+\item[b.]
+~\\ El Diseño Completamente Aleatorizado (D.C.A) es el adecuado para esta situación ya que solo se quiere medir, el efecto que tiene cada uno de los químicos sobre la resistencia que tiene los materiales al machacado después de haber aplicado cada uno de los 4 (A, B, C, D) productos químicos.
+\item[c.]
+~\\\textbf{Estadísticas descriptivas:}
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+\hline 
+  & Mín & Q1 & Mediana & Media & Q3 & Máx & Des. Estándar & CV(\%)  \\ 
+\hline 
+A & 5 & 6 & 7 & 7 & 8 & 9 & 2 & 28.57143 \\
+B & 3 & 3.5 & 4 & 5 & 6 & 8 & 2.645751 & 52.91503 \\
+C & 8 & 8.5 & 9 & 10 & 11 & 13 & 2.645751 & 26.45751 \\
+D & 4 & 5 & 6 & 6 & 7 & 8 & 2 & 33.33333 \\
+\hline 
+\end{tabular} 
+\end{center}
+~\\De acuerdo a lo que podemos ver en la tabla de estadísticas descriptivas de cada uno de los productos químicos, podemos ver como, todos los productos químicos que estamos comparando están muy cerca entre si en el momento de evaluar la resistencia que tienen ciertos materiales al machacado, podemos ver como la desviación estándar están muy cerca entre los 4 productos y as específicamente la del producto químico A es igual al producto químico D y los productos químicos B y C también lo son, el producto químico B tiene una media y una mediana mucho mayor que los otros, el rango mas amplio en el que se mueve la resistencia es de 5.
+
+\pagebreak
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale=0.50]{FigurasUV/imagen1.png}
+\end{figure}
+
+~\\En la gráfica podemos observar un poco mejor lo que decíamos de que la resistencia dada por los productos químicos es muy parecida, pero queda aun mas en evidencia que el producto químico C esta produciendo valores un poco mas altos que los otros 3
+
+\item[d.]
+~\\Se plantea el siguiente modelo:
+\begin{center}
+$y_{ij}=\mu+\tau_i+\varepsilon_{ij}$ \;\;\; $i=1,...,4$ \;\;\; $j=1,...,3$
+\end{center}
+~\\El cuál se construye bajo los siguientes supuestos:
+\begin{center}
+$\varepsilon_{ij}\approx N(0,\sigma^2),\;\; E[\varepsilon_{ij}]=0 \;\;\; \forall_{ij}, \;\; V[\varepsilon_{ij}]=\sigma^2, \;\; cov[\varepsilon_{ij},\varepsilon_{i'j'}]=0$
+\end{center}
+~\\Donde:
+~\\$y_{ij}=$Resistencia al machacado de la j-ésima prueba del producto químico i.
+~\\$\mu=$Media general de la resistencia al machacado por material sin tener en cuenta ningún producto químico
+~\\$\tau_i=$Efecto del i-ésimo Producto químico sobre la resistencia al machacado
+~\\$\varepsilon_{ij}=$Error aleatorio debido al i-ésimo producto químico en la j-ésima réplica.
+\item[e.]
+~\\Planteamos la siguiente hipótesis:
+\begin{center}
+~\\$H_0:$No hay un efecto del factor de tratamiento(Producto químico) sobre la resistencia al machacado
+~\\$H_1:$Al menos uno de los tratamientos(Productos químicos) tiene un efecto significativo sobre la resistencia al machacado.
+
+\end{center}
+~\\Ya que queremos comprobar si alguno de los productos quimicos tiene diferencia  entre ellos con respecto a la resistencia al machacado.
+
+\item[f.]
+~\\Para poder realizar la tabla ANOVA para comparar cada uno de los tratamientos (productos químicos) primero debemos debemos comprobar los supuestos del modelo, para poder así estar obteniendo los resultados y las interpretaciones adecuadas.
+
+~\\Los supuestoos que vamos a probar a continuación y en los cuales se basa el modelo serán:
+
+$$\varepsilon_{ij}\approx N(0,\sigma^2)  \rightarrow \;\; Normalidad$$
+$$ E[\varepsilon_{ij}]=0 \;\;\; \forall_{ij} \rightarrow \;\; Correcta\; especificacion$$
+$$V[\varepsilon_{ij}]=\sigma^2 \;\;\; \forall_{ij}\rightarrow \;\; Homocedasticidad$$ 
+$$cov[\varepsilon_{ij},\varepsilon_{i'j'}]=0 \;\;\; \forall_{i\neq i'}  \;\; \wedge \;\;\; \forall_{j\neq j'} \rightarrow \;\; Independencia$$
+
+\item[-]Normalidad: Primero que todo para realizar las pruebas de normalidad se realizaran dos pruebas gráficas las cuales son el histograma y un QQ-plot y una prueba estadística que es la Shapiro-Wilk, esta prueba es utilizada cuando el numero de muestra es menor a 30 como se ve en este caso.
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale=0.35]{FigurasUV/imagen2.png}
+\end{figure}
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale=0.35]{FigurasUV/imagen3.png}
+\end{figure}
+
+~\\Como se puede ver en la gráfica del QQ-plot seria conveniente decir que la normalidad si se cumple ya que los residuales están dentro de las bandas que representan un intervalo de confianza, pero para el histograma es mucho mas dudoso el que esta normalidad exista, por tanto se llevara a cabo el test
+
+\item[*]Test Shapiro-Wilk:$$H_0:Los\; datos\; provienen\; de\; una\; distribucion\; normal$$
+$$H_a:Los\; datos\; no\; provienen\; de\; una\; distribucion\; normal$$
+$$W = 0.84469, p-value = 0.03159$$
+
+~\\Como el valor p obtenido por el test de Shapiro-Wilk es menor que un alfa de 0.05 rechazamos la hipótesis nula lo que nos indica que no hay evidencia estadística para decir que los datos siguen una distribución  normal, y así notamos como el primer supuesto es incumplido.
+\item[-]Correcta Especificación:
+\item[*]T-test:$$H_0: La\; verdadera\; media\; es\; igual\; a\; 0 $$
+$$H_a:La\; verdadera\; media\; no\; es\; igual\; a\; 0$$
+$$t = -3.7658e-16, df = 11, p-value = 1$$
+
+~\\Como se dijo anteriormente, sabemos que el supuesto de correcta especificación siempre se cumple ya que el modelo que se plantea asegura este hecho con los residuales, y como podemos ver en la prueba t realizada no rechazamos la hipótesis nula de que la media es igual a 0, que el valor p es superior a un nivel de significancia del 0.05
+
+\item[-]Homocedasticidad: 
+
+\item[*]Prueba de Levene:$$H_0:Las\;varianzas\;de\;todos\;los\;grupos\;son\;iguales$$
+$$H_a:Al\;menos\;una\;de las\; varianzas\;es\;diferente$$
+$$Levene's\;Test\;for\;Homogeneity\;of\;Variance\;(center = median)\; df = 3, p-value = 0.9888$$
+
+~\\Para analizar la igualdad de varianzas se realizo la prueba estadística de levene ya que trabajar bajo la normalidad de que fue algo que detectamos en la primera prueba que hicimos, como podemos ver, no hay evidencia estadística para rechaza la hipótesis nula de que las varianzas son iguales con un nivel alfa de 0.05.
+
+\item[-]Independencia:Para probar el supuesto de independencia se realizará una prueba de rachas, otras pruebas como Durbin-Watson y como los correlogramas no se realizaran por los motivos anteriormente explicados
+
+\item[*]Test de rachas: $$H_0:La \; muestra\; es\; aleatoria\; (las \; observaciones \;son \; independientes)$$
+$$H_a:La \; muestra\; no \;es\; aleatoria\; (las \; observaciones \; no\;son \; independientes)$$
+$$Standard \; Normal = 1.1498, p-value = 0.2502$$
+~\\Como se puede observar en la prueba de rachas, el valor p = 0.2502 es mas grande que nuestro nivel de significancia $\alpha=0.05$ o que nos lleva a rechazar la hipótesis nula, significa que no hay suficiente evidencia estadística para decir que los datos no se comportan de manera aleatoria; que la hipótesis nos confirme la aleatoriedad de los residuales nos permite concluir que estos son independientes entre ellos, y así queda confirmado el supuesto de independencia
+
+~\\Ya que la normalidad no se cumplió como debe ser para poder realizar la prueba ANOVA de manera correcta se realizara una prueba ANOVA no paramétrica o prueba de Kruskal - Wallis que maneja la falta del supuesto de normalidad reemplazando los datos por categorías, pero exige que los datos provengan de la misma distribución con la misma varianza supuestos que si se cumplen
+
+$$Kruskal-Wallis\;chi-squared = 5.2905, df = 3, p-value = 0.1517$$
+
+~\\Como podemos ver en el test de Kruskal-Wallis tenemos un valor p mucho mayor que un nivel de significancia de 0.05 lo que nos indica que no hay evidencia estadística para decir que hay diferencia en la resistencia que proporcionan los productos químicos en los materiales
+
+\item[g.]Como dijimos en el punto anterior, la prueba anova no arrojo resultados para pensar que hay diferencia entre la resistencia que proporciona los diferentes químicos aplicados en los materiales al machacado, por lo tanto, no es necesario hacer pruebas post anova.
+
+\item[h.]Segun el estudio podemos ver que los quimicos no proporcionan ninguna resistencia adicional al machado de los materiales como en un principio lo habian planteado los investigadores, mas sin embargo para poder plantear una prueba mucho mas exacta con respecto a estas diferencias, se recomienda plantear una diseño diferente al D.C.A ya que la diferencia en los materiales proporciona una variabilidad que no es tenida en cuenta al realizar un D.C.A, se propone un diseño por bloques, y despues de eso ya se podria estuadiar con mucha mas exactitud si estas diferencias existen dependiendo del material, y asi poder solucionar correctamente las dudas de los investigadores
+\end{itemize}
+% //// --------------------------------------------------------------------------------
+% -------------------------------------------------------------------------------------
+% Fin del cuerpo del documento
+% **** --------------------------------------------------------------------------------
+% **** --------------------------------------------------------------------------------
+% Espacio para colocar el nombre del archivo *.bib (sin la extensión .bib) que contiene
+% las referencias bibliográficas del artículo utilizando el estilo bibliográfico BibTeX
+% "\referencias{.}"
+% **** --------------------------------------------------------------------------------
+\bibliography{references}
+% //// --------------------------------------------------------------------------------
+% //// --------------------------------------------------------------------------------
+    \appendix% !no modificar esta línea¡
+% -------------------------------------------------------------------------------------
+% Espacio para ubicar los apéndices: tablas y gráficas
+% **** --------------------------------------------------------------------------------
+
+
+% -------------------------------------------------------------------------------------
+% Fin del artículo
+% **** --------------------------------------------------------------------------------
+\end{document}
