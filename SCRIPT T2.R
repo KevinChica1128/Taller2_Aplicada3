@@ -1,26 +1,33 @@
 #Kevin Steven García - 1533173
 #Alejandro Vargas - 1525953
 #Alejandro Soto - 1532457
-#Taller 1 Aplicada III(diseño completamente aleatorizado)
+#Taller 2 Aplicada III(DBCA Y DISEÑO FACTORIAL)
 #----------------------------------------------------#
 #Punto 1:
-Calcio<-c(23.46,23.48,23.56,23.39,23.40,23.59,23.46,23.42,23.49,23.50,23.51,23.64,23.46,
-          23.52,23.49,23.28,23.40,23.37,23.46,23.39,23.29,23.46,23.37,23.32,23.38)
-Lote<-as.factor(c(rep("Lote 1",5),rep("Lote 2",5),rep("Lote 3",5),rep("Lote 4",5),rep("Lote 5",5)))
-datos<-data.frame(Lote=Lote, Calcio=Calcio)
+#Ingresamos los datos
+Niquel<-c(67.0,67.5,76.0,72.7,73.1,65.8,75.6)
+Hierro<-c(71.9,68.8,82.6,78.1,74.2,70.8,84.9)
+Cobre<-c(72.2,66.4,74.5,67.3,73.2,68.7,69)
+Fuerza<-c(Niquel,Hierro,Cobre)
+Agente<-as.factor(c(rep("1Niquel",7),rep("2Hierro",7),rep("3Cobre",7)))
+Lingote<-as.factor(rep(seq(1,7),3))
+datos<-data.frame(Lingote=Lingote,Agente=Agente, Fuerza=Fuerza)
 attach(datos) 
 head(datos)
+
 #Descriptivos
 library(ggplot2)
-p<-ggplot(datos, aes(Lote,Calcio)) + geom_point()
-p + scale_x_discrete(name="Lote",
-                     labels=c("Lote 1","Lote 2","Lote 3","Lote 4","Lote 5")) + labs(y="Calcio")
+p<-ggplot(datos, aes(Agente, Fuerza)) + geom_point()
+p + scale_x_discrete(name="Agente soldante",
+                     labels=c("Niquel","Hierro","Cobre"))+labs(y="Fuerza(1000lb/plg^2)")
 
 #Incluye la media en el gráfico
 x11()
-p + scale_x_discrete(name="Lote",
-                     labels=c("Lote 1","Lote 2","Lote 3","Lote 4","Lote 5")) + labs(y="Calcio") +
+p + scale_x_discrete(name="Agente soldante",
+                     labels=c("Niquel","Hierro","Cobre")) + labs(y="Fuerza(1000lb/plg^2)") +
   stat_summary(fun.y=mean, colour="red", geom="point", shape=19, size=2)
+
+
 #Construimos el modelo y obtenemos la ANOVA:
 mod<-aov(Calcio~Lote, data=datos)
 summary(mod)

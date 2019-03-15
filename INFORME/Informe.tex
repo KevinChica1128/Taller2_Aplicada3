@@ -49,7 +49,7 @@ year = 2019]
 % **** --------------------------------------------------------------------------------
 \title[maintitle = {Diseño Completamente Aleatorizado},
        %secondtitle = Template for report in a course,
-       shorttitle = Taller DCA
+       shorttitle = Taller DBCA y diseño factorial
 ]
 % //// --------------------------------------------------------------------------------
 % -------------------------------------------------------------------------------------
@@ -135,79 +135,85 @@ de grado.tex}) and can be used as a guideline just replacing its contents. It is
 % **** --------------------------------------------------------------------------------
 
 \section{Punto 1}
-~\\Un fabricante supone que existe diferencias en el contenido de calcio en lotes de materia prima que le son suministrados por su proveedor. Actualmente hay una gran cantidad de lotes en la bodega. Cinco (5) lotes son seleccionados. Un químico realiza 5 pruebas a cada lote y obtiene los siguientes resultados:
+~\\Uno de los objetivos de la industria metalúrgica nacional es determinar cuál de los tres elementos: níquel, hierro o cobre es el mejor agente soldante. Se sueldan una serie de lingotes de acero utilizando cada uno de los posibles agentes soldantes (níquel, hierro o cobre). Existen diferencias entre los lingotes de acero utilizados en este proceso, se utiliza en total 7 lingotes (todos diferentes), se mide la fuerza (expresada en 1000 libras por pulgada cuadrada) necesaria para soldar los lingotes. Los resultados fueron:
 
 \begin{center}
-\begin{tabular}{ccccc}
+\begin{tabular}{cccc}
 \hline 
-LOTE 1 & LOTE 2 & LOTE 3 & LOTE 4 & LOTE 5 \\ 
+& AGENTE & SOLDANTE & \\
+\hline
+LINGOTE & NIQUEL & HIERRO & COBRE \\ 
 \hline 
-23.46 & 23.59 & 23.51 & 23.28 & 23.29\\
-23.48 & 23.46 & 23.64 & 23.4  & 23.46\\
-23.56 & 23.42 & 23.46 & 23.37 & 23.37\\
-23.39 & 23.49 & 23.52 & 23.46 & 23.32\\
-23.4  & 23.5  & 23.49 & 23.39 & 23.38\\
+1 & 67.0 & 71.9 & 72.2 \\
+2 & 67.5 & 68.8 & 66.4 \\
+3 & 76.0 & 82.6 & 74.5 \\
+4 & 72.7 & 78.1 & 67.3 \\
+5 & 73.1 & 74.2 & 73.2 \\
+6 & 65.8 & 70.8 & 68.7 \\
+7 & 75.6 & 84.9 & 69.0 \\
 \hline 
 \end{tabular} 
 \end{center}
 
 \begin{itemize}
 \item[a.]
-\begin{itemize}
-\item[-]Unidad experimental: Materia prima
-\item[-]Factor: Lote
-\item[-]Niveles: Lote 1, Lote 2, Lote 3, Lote 4 y lote 5
-\item[-]Tratamientos: Lote 1, Lote 2, Lote 3, Lote 4 y lote 5
-\item[-]Variable de respuesta: Contenido de calcio
-\end{itemize}
+~\\El diseño de bloques completos al azar (DBCA) es el adecuado para este problema, ya que, se quieren comparar 3 tratamientos contenidos en 7 bloques (lingotes) relativamente homogéneos, se consideran los lingotes como bloques, ya que nos dicen que los 7 son diferentes y teniendo en cuenta esto, se podría decir que es un factor perturbador el cual tiene un efecto en la variable de respuesta pero no es de nuestro interés, entonces se desea controlar esta variabilidad que surge de este factor (lingote) que podría afectar en los resultados.
 
 \item[b.]
-~\\El diseño completamente aleatorizado es adecuado en esta situación, ya que se quiere analizar si existen diferencias entre los lotes de materia prima en cuanto a la concentración de calcio, es decir se investiga el efecto de un factor(lote) con a(5) niveles (o a(5) tratamientos) sobre una variable de respuesta que es contenido de calcio; además, como los lotes son de la misma materia prima y el mismo proveedor, también se podría suponer que las unidades experimentales son homogéneas y, finalmente, de una gran cantidad de lotes se seleccionaron 5 de ellos, es decir, se realizó un proceso de aleatorización en la asignación de unidades experimentales cumpliendo con las 4 características principales del DCA.
+\begin{itemize}
+\item[-]Unidad experimental: Lingote
+\item[-]Factor de tratamiento: Agente Soldante
+\item[-]Niveles: Niquel, Hierro, Cobre.
+\item[-]Factor de control: Tipo de lingote
+\item[-]Niveles: 1,2,3,4,5,6 y 7.
+\item[-]Tratamientos: Niquel, Hierro y Cobre.
+\item[-]Variable de respuesta: Fuerza necesaria para soldar los lingotes ($1000lb/plg^2$)
+\end{itemize}
 
 \item[c.]
 ~\\\textbf{Estadísticas descriptivas:}
-
+~\\Dado que nuestro interés se centra en los tratamientos que en este caso son los niveles de los agentes soldantes (Niquel, Hierro y Cobre), obtendremos descriptivas por estos niveles y no por los tipos de lingotes(bloques) los cuales no son de nuestro interés:
 \begin{center}
 \begin{tabular}{|c|c|c|c|c|c|c|c|c|}
 \hline 
   & Mín & Q1 & Mediana & Media & Q3 & Máx & Des. Estándar & CV(\%)  \\ 
 \hline 
-Lote 1 & 23.39 & 23.4 & 23.46 & 23.458 & 23.48 & 23.56 & 0.068702256 & 0.29287346 \\
-Lote 2 & 23.42 & 23.46 & 23.49 & 23.492 & 23.5 & 23.59 & 0.063007936 & 0.26821018 \\
-Lote 3 & 23.46 & 23.49 & 23.51 & 23.524 & 23.52 & 23.64 & 0.068774995 & 0.29236097 \\
-Lote 4 & 23.28 & 23.37 & 23.39 & 23.38 & 23.4 & 23.46 & 0.065192024 & 0.27883672 \\
-Lote 5 & 23.29 & 23.32 & 23.37 & 23.364 & 23.38 & 23.46 & 0.06503845 & 0.27837036 \\
+Niquel &	65,8&	67,25&	72,7&	71,1&	74,35&	76,0&	4,25597619&	5,985901815 \\
+Hierro&	68,8&	71,35&	74,2&	75,9&	80,35&	84,9&	6,137860648&	8,086772922 \\
+Cobre&	66,4&	68&	69,0&	70,2&	72,7&	74,5&	3,109892051&	4,430947356\\
+
 \hline 
 \end{tabular} 
 \end{center}
 ~\\En la tabla anterior, se podría decir a priori, que no se aprecian diferencias significativas entre los lotes en cuanto a la cantidad de calcio que presentan. Todas tienen valores muy parecidos en cada uno de los estadísticos obtenidos. Poseen casi la misma media, mediana y desviación.
 
-\pagebreak
 \begin{figure}[h!]
   \centering
-  \includegraphics[scale=0.35]{FigurasUV/D1.pdf}
+  \includegraphics[scale=0.5]{FigurasUV/D1.pdf}
 \end{figure}
 ~\\En ésta gráfica dado que el eje y reduce demasiado su escala, se pueden apreciar diferencias decimales, y se observa que en decimales, el lote 1, 2 y 3 son parecidos, siendo el 3 el que más calcio contiene, y los lotes 4 y 5 son casi iguales, y tienen menor calcio que los otros 3 lotes.
 
 \item[d.]
 ~\\Se plantea el siguiente modelo:
 \begin{center}
-$y_{ij}=\mu+\tau_i+\varepsilon_{ij}$ \;\;\; $i=1,...,5$ \;\;\; $j=1,...,5$
+$y_{ij}=\mu+\tau_i+\beta_j+\varepsilon_{ij}$ \;\;\; $i=1,...,3$ \;\;\; $j=1,...,7$
 \end{center}
 ~\\El cuál se construye bajo los siguientes supuestos:
 \begin{center}
 $\varepsilon_{ij}\approx N(0,\sigma^2),\;\; E[\varepsilon_{ij}]=0 \;\;\; \forall_{ij}, \;\; V[\varepsilon_{ij}]=\sigma^2, \;\; cov[\varepsilon_{ij},\varepsilon_{i'j'}]=0$
 \end{center}
 ~\\Donde:
-~\\$y_{ij}=$Cantidad de calcio en la j-ésima prueba del lote i.
-~\\$\mu=$Media general de contenido de calcio por lote sin tener en cuenta el tipo de lote.
-~\\$\tau_i=$Efecto del i-ésimo lote sobre el contenido de calcio.
-~\\$\varepsilon_{ij}=$Error aleatorio debido al i-ésimo lote en la j-ésima réplica.
+~\\$y_{ij}=$Fuerza necesaria para soldar el lingote j-ésimo con el agente soldante i-ésimo.
+~\\$\mu=$Media general de contenido de calcio por lote sin tener en cuenta el agente soldante ni el tipo de lingote.
+~\\$\tau_i=$Efecto del i-ésimo agente soldante sobre la fuerza necesaria para soldar el lingote.
+~\\$\beta_j=$Efecto del j-ésimo lingote sobre la fuerza necesaria para soldarlo.
+~\\$\varepsilon_{ij}=$Error aleatorio debido al i-ésimo agente soldante y a el j-ésimo lingote.
+
 \item[e.]
-~\\Planteamos la siguiente hipótesis:
+~\\Dado que no nos interesan los bloques(tipo de lingote), ya que a priori nos dijeron que entre estos existen diferencias. Nos centraremos en los efectos de los tres tratamientos o agentes soldantes. Por lo que se plantea la siguiente hipótesis:
 \begin{center}
-~\\$H_0:$No hay un efecto del factor de tratamiento(lote) sobre la cantidad de calcio.
-~\\$H_1:$Al menos uno de los tratamientos(lote) tiene un efecto significativo sobre la cantidad de calcio.
+~\\$H_0:\tau_1=\tau_2=\tau_3=\tau$
+~\\$H_1:$Al menos una de las igualdades no se cumple.
 \end{center}
 \item[f.]
 ~\\Antes de realizar la ANOVA e interpretar los resultados, se comprobarán los supuestos del modelo para saber si las interpretaciones que obtengamos si van a ser correctas.
