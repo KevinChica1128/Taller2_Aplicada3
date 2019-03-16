@@ -185,13 +185,13 @@ Cobre&	66,4&	68&	69,0&	70,2&	72,7&	74,5&	3,109892051&	4,430947356\\
 \hline 
 \end{tabular} 
 \end{center}
-~\\En la tabla anterior, se podría decir a priori, que no se aprecian diferencias significativas entre los lotes en cuanto a la cantidad de calcio que presentan. Todas tienen valores muy parecidos en cada uno de los estadísticos obtenidos. Poseen casi la misma media, mediana y desviación.
+~\\En la tabla anterior, podemos observar que el hierro tiene un promedio de 75.9 $1000lb/plg^2$, mientras que el Niquel y el Cobre tienen un promedio de 71.1 y 70.2 $1000lb/plg^2$ respectivamente, lo cuál nos indicaría a priori, que el efecto de los agentes soldantes Niquel y Cobre sobre la fuerza necesaria para soldar los lingotes son muy parecidos, mientras que el efecto del agente soldante Hierro es distinto a los nombrados anteriormente. En cuanto a la desviación estándar, sucede lo mismo que con la media, la de los agentes soldantes Niquel y Cobre son bastante parecidas(4.256 y 3.11 $1000lb/plg^2$ respectivamente), mientras que la del agente soldante Hierro es un poco más elevada(6.1378 $1000lb/plg^2$). Finalmente, si se observan en general los estadísticos mínimo y máximo y los cuartiles, se llega a lo mismo mencionado anteriormente, los agentes soldantes Nique y Cobre se comportan de una manera similar, mientras que el Hierro parece necesitar mayor fuerza para soldar los lingotes.
 
 \begin{figure}[h!]
   \centering
   \includegraphics[scale=0.5]{FigurasUV/D1.pdf}
 \end{figure}
-~\\En ésta gráfica dado que el eje y reduce demasiado su escala, se pueden apreciar diferencias decimales, y se observa que en decimales, el lote 1, 2 y 3 son parecidos, siendo el 3 el que más calcio contiene, y los lotes 4 y 5 son casi iguales, y tienen menor calcio que los otros 3 lotes.
+~\\En ésta gráfica se confirman las interpretaciones dadas anteriormente, los agentes soldantes Niquel y Cobre, son muy parecidos en cuanto a su media y su comportamiento en general con respecto a la fuerza necesaria para soldar los lingotes, mientras que el agente soldante Hierro, tiene una media más elevada y una dispersión mayor, lo que significa que con este agente soldante se necesita mayor fuerza para soldar los lingotes.
 
 \item[d.]
 ~\\Se plantea el siguiente modelo:
@@ -229,13 +229,13 @@ $$cov[\varepsilon_{ij},\varepsilon_{i'j'}]=0 \;\;\; \forall_{i\neq i'}  \;\; \we
   \centering
   \includegraphics[scale=0.35]{FigurasUV/N1.pdf}
 \end{figure}
-~\\En estas gráficas se podría pensar que el supuesto no se cumple, ya que la cola derecha de la distribución se sale de los intervalos de confianza de la recta de cuantiles teórica de la distribución normal. Sin embargo, las pruebas gráficas no son muy convincentes ya que su interpretación puede ser distinta de una persona a otra y depende mucho de la experiencia del investigador. Por ello se acude a la prueba formal.
+~\\En estas gráficas no se observa un incumplimiento claro de este supuesto, ya que en el QQplot se observa que los puntos no se salen de los intervalos de confianza de la recta de cuantiles teórica de la distribución normal y en el histograma no se ve un comportamiento muy diferente a una distribución normal. Sin embargo, las pruebas gráficas no son muy convincentes ya que su interpretación puede ser distinta de una persona a otra y depende mucho de la experiencia del investigador. Por ello se acude a la prueba formal.
  
 \item[*]Test Shapiro-Wilk:$$H_0:Los\; datos\; provienen\; de\; una\; distribucion\; normal$$
 $$H_a:Los\; datos\; no\; provienen\; de\; una\; distribucion\; normal$$
 $$W = 0.98289, p-value = 0.9606$$
 
-~\\Como el p-valor=0.1192 es superior a nuestro nivel de significancia $\alpha=0.05$, no se rechaza la hipótesis nula, y concluimos que no hay evidencia estadística suficiente para decir que los datos no provienen de una distribución normal, lo que nos indica que este supuesto de normalidad en los errores no se incumple.
+~\\Como el p-valor=0.9606 es muy superior a nuestro nivel de significancia $\alpha=0.05$, no se rechaza la hipótesis nula, y concluimos que no hay evidencia estadística suficiente para decir que los datos no provienen de una distribución normal, lo que nos indica que este supuesto de normalidad en los errores no se incumple.
 \item[-]Correcta Especificación:Sabemos que este supuesto siempre se cumple, ya que el método o la construcción del modelo asegura que la esperanza de los residuales sea igual a cero, sin embargo, se realizó una prueba t para comprobarlo.
 
 \item[*]T-test:$$H_0: La\; verdadera\; media\; es\; igual\; a\; 0 $$
@@ -244,18 +244,18 @@ $$t = 1.9109e-16, df = 24, p-value = 1$$
 ~\\Como el p-valor=1 es superior a nuestro nivel de significancia $\alpha=0.05$, no se rechaza la hipótesis nula, y se verifica lo dicho anteriormente. 
 
 
-\item[-]Homocedasticidad:Para analizar la homocedasticidad se realizó una gráfica(Residuos estandarizados por agente soldante) y una prueba estadísticas(Test de Barlett)
+\item[-]Homocedasticidad:Para analizar la homocedasticidad se realizó una gráfica(Residuos estandarizados por agente soldante) y una prueba estadística (Test de Barlett)
 \begin{figure}[h!]
   \centering
   \includegraphics[scale=0.35]{FigurasUV/H1.pdf}
 \end{figure}
-~\\En esta gráfica se confirma o dicho en las estadísticas descriptivas, las varianzas entre los residuos de cada factor son muy parecidas. Claramente se ve que se cumple el supuesto de homocedasticidad, sin embargo se realiza la prueba formal, la cual se espera que tenga un p valor bastante alto, por la evidencia que se tiene.
+~\\En esta gráfica se observa que para el agente soldante Niquel, la dispersión de los puntos(residuales estandarizados) es menor que la de los otros dos agentes soldantes(Hierro y Cobre) las cuales son muy parecidas, por lo que se pensaría que este supuesto podría incumplirse, sin embargo se realiza la prueba formal, la cual se espera que tenga un p valor no tan alto, por el gráfico obtenido anteriormente.
 
 \item[*]Prueba de Barlett:$$H_0:Las\;varianzas\;de\;todos\;los\;grupos\;son\;iguales$$
 $$H_a:Al\;menos\;una\;de las\; varianzas\;es\;diferente$$
 $$Bartlett's \; K-squared = 4.3295, df = 2, p-value = 0.1148$$
 
-~\\Como el p-valor=0.9998 es superior a nuestro nivel de significancia $\alpha=0.05$, no se rechaza la hipótesis nula, y concluimos que no hay evidencia estadística suficiente para decir que al menos entre dos grupos la varianza es diferente, lo que nos indica que este supuesto de homocedasticidad en los errores no se incumple.
+~\\Como el p-valor=0.1148 es superior a nuestro nivel de significancia $\alpha=0.05$, no se rechaza la hipótesis nula, y concluimos que no hay evidencia estadística suficiente para decir que al menos entre dos grupos la varianza es diferente, lo que nos indica que este supuesto de homocedasticidad en los errores no se incumple.
 
 
 \item[-]Independencia:Para probar el supuesto de independencia en los errores, no se debe realizar un correlograma o una prueba sobre la autocorrelación(prueba de Durbin-Watson) ya que estas dependen del orden en el cuál se obtuvieron los datos, y esa información no se tiene, por lo tanto, solo se realizará una prueba de rachas.
@@ -263,7 +263,7 @@ $$Bartlett's \; K-squared = 4.3295, df = 2, p-value = 0.1148$$
 \item[*]Test de rachas: $$H_0:La \; muestra\; es\; aleatoria\; (las \; observaciones \;son \; independientes)$$
 $$H_a:La \; muestra\; no \;es\; aleatoria\; (las \; observaciones \; no\;son \; independientes)$$
 $$Standard \; Normal = 0.68395, p-value = 0.494$$
-~\\Como el p valor=0.62212 es mayor que nuestro nivel de significancia $\alpha=0.05$, no rechazamos la hipótesis nula y concluimos que no hay evidencia estadística suficiente para decir que los residuales no están distribuidos de manera aleatoria, en otras palabras, no podemos decir que no son independientes. Teniendo en cuenta esto, podemos decir que este supuesto de independencia en los errores parece no incumplirse.
+~\\Como el p valor=0.494 es mayor que nuestro nivel de significancia $\alpha=0.05$, no rechazamos la hipótesis nula y concluimos que no hay evidencia estadística suficiente para decir que los residuales no están distribuidos de manera aleatoria, en otras palabras, no podemos decir que no son independientes. Teniendo en cuenta esto, podemos decir que este supuesto de independencia en los errores parece no incumplirse.
 \end{itemize}
 ~\\Ya que según las pruebas aplicadas, ninguno de los supuestos se incumple, procedemos a realizar e interpretar la ANOVA:
 \begin{center}
@@ -278,9 +278,10 @@ Residuals &   12&  124.5&   10.37&    & \\
 \end{tabular} 
 \end{center} 
   
-~\\Podemos ver que el p valor=0.00363 es inferior a nuestro nivel de significancia $\alpha=0.05$, por lo cual se rechaza $H_0$ planteada en el item e, y concluimos que al menos uno de los tratamientos(lote) tiene un efecto significativo sobre la cantidad de calcio.
+~\\El análisis se centra en el factor que nos interesa, el cual es el factor de tratamiento (tipo de agente soldante). Vemos que se obtiene un $p valor=0.0131$ menor que nuestro nivel de significancia $\alpha=0.05$, por lo que se rechaza la hipótesis nula planteada en el literal e, y concluimos que hay evidencia estadística para decir que los agentes soldantes(Cobre, Hierro y Niquel) no producen el mismo efecto en cuanto a la fuerza necesaria para soldar los lingotes. 
+~\\Haciendo un análisis breve sobre el factor de control o factor de bloqueo(Lingote), dado que el $p valor=0.0151<0.05$, se confirma lo descrito en el enunciado. Existen diferencias entre los lingotes de acero utilizados en este proceso.
 
-\item[g.]Se realizará la prueba postanova de comparaciones múltiples de Tukey. Los resultados resumidos para esta prueba son:
+\item[g.]Se realizará la prueba postanova de comparaciones múltiples de Tukey, ya que en la ANOVA se encontró que si existen diferencias. Los resultados resumidos para esta prueba son:
 \begin{center}
 \begin{tabular}{|c|c|c|c|c|c|c|}
 \hline
@@ -293,10 +294,9 @@ Agente & lsmean &  SE &df& lower.CL& upper.CL& .group\\
 \end{tabular}
 \end{center}
 
+~\\Los tratamientos con la misma letra no son significativamente diferentes. Es decir, los agentes soldantes Niquel y Cobre no son significativamente diferentes, siendo estos, los que menos fuerza (expresada en 1000 libras por pulgada cuadrada) requieren para soldar los lingotes. Mientras que el agente soldante Hierro es estadisticamente diferentes a los dos anteriores; este requiere un poco más de fuerza  para soldar los lingotes. Lo anterior confirma loa hipótesis que se tenía desde las estadísticas descriptivas, donde dijimos que este agente soldante parecía diferir de los otros dos.
 
-~\\Los tratamientos con la misma letra no son significativamente diferentes. Es decir, los lotes 3 y 2 no son significativamente diferentes, siendo estos, los que más contenido de calcio tienen. El lote 1 no es significativamente diferentes a los dos lotes mencionados anteriormente, sin embargo, tampoco es diferente al lote 4, esto se podría interpretar como que este lote 1 tiene una cantidad de calcio promedio, lo cual se observa en la gráfica del item c. El lote 4 es diferente a los lotes 3 y 2(presenta una cantidad de calcio inferior), y es estadísticamente igual a los lotes 1 y 5. Finalmente el lote 5 es diferente a los lotes 3,2 y 1, y semejante al lote 4, siendo este, el que menor cantidad de calcio presenta. 
-
-\item[h.]Las conclusión principal que se obtiene es que la suposición del fabricante sobre la existencia de diferencias en el contenido de calcio en los lotes de materia prima resulto ser cierta, en la ANOVA se detectó que al menos uno de los lotes difiere en cuanto al contenido de calcio. Posteriormente en la prueba postanova de Fisher, se observó que los lotes 3 y 2 son los que más contenido de calcio presentan, el lote 1 presenta un contenido de calcio promedio, y los lotes 4 y 5 son los que menor contenido de calcio tienen. Si nos vamos al contexto de los datos, los resultados nos están diciendo que existen diferencias estadisticamente significativas, sin embargo, estas diferencias pueden no ser grandes para el fabricante, ya que se detectaron diferencias decimales.Entonces queda a decisión del fabricante si realmente acepta la decisión o si por el contrario, las diferencias no le parecen significativas dentro del contexto.
+\item[h.]La primera conclusión que se obtiene es que existen diferencias entre los tres agentes soldantes en cuanto a la fuerza requerida para soldar los lingotes , en la ANOVA se detectó que al menos uno de los agentes soldantes difiere. Posteriormente en la prueba postanova de comparaciones múltiples, se observó que los agentes soldantes Cobre y Niquel son los que menor fuerza requieren para soldar los lingotes, mientras que el agente soldante Hierro requiere un poco más de fuerza. Suponiendo que el mejor agente soldante sea el que menos fuerza requiera para soldar los diferentes lingotes, se le daría como respuesta a la industria metalúrgica nacional que los mejores son el Cobre y el Niquel, por lo cuál se seleccionaría el que resulte menos costoso, ya que la diferencia entre la fuerza requerida para estos dos es insignificante, es decir, requieren la misma fuerza para soldar los diferentes lingotes.
 
 \end{itemize}
 
