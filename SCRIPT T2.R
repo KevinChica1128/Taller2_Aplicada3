@@ -27,9 +27,8 @@ p + scale_x_discrete(name="Agente soldante",
                      labels=c("Niquel","Hierro","Cobre")) + labs(y="Fuerza(1000lb/plg^2)") +
   stat_summary(fun.y=mean, colour="red", geom="point", shape=19, size=2)
 
-
 #Construimos el modelo y obtenemos la ANOVA:
-mod<-aov(Calcio~Lote, data=datos)
+mod<-aov(Fuerza~Agente+Lingote, data=datos)
 summary(mod)
 #Si no se cumplen los supuestos, no sirve interpretar los resultados de la ANOVA
 
@@ -43,7 +42,7 @@ library(car)
 x11()
 par(mfrow=c(1,2))
 hist(resid, freq=FALSE)
-curve(dnorm(x,mean(resid), sd(resid)), xlim=c(-4,6), add=TRUE, col=2)
+curve(dnorm(x,mean(resid), sd(resid)), add=TRUE, col=2)
 qqPlot(resid, pch=20,main="QQ-Plot de los residuos")
 
 #Prueba formal
@@ -54,11 +53,14 @@ shapiro.test(resid)
 t.test(resid, mu = 0, alternative = c("two.sided"))
 
 #Homogeneidad de Varianzas
+#Residuos estandarizados por agente soldante:
+library(ggplot2)
 x11()
-plot(mod$fitted.values, rstandard(mod), main="Valores ajustados vs Residuos",xlab = "Valores Ajustados",ylab = "Residuos Estandarizados")
-abline(h=0, col="red") ## traza una l?nea horizontal (h) por el Y=0
+p1<-ggplot(datos, aes(Agente, rstandard(mod))) + geom_point()
+p1 + scale_x_discrete(name="Agente soldante",
+                     labels=c("Niquel","Hierro","Cobre"))+labs(y="Residuos estandarizados")
 #Barlett
-bartlett.test(resid~Lote, data=datos) 
+bartlett.test(resid~Agente, data=datos) 
 
 #Independencia en los errores
 #Prueba de rachas: H0:Los residuales se distribuyen de manera aleatoria
@@ -76,195 +78,11 @@ runs.test(factor(residualesfactor))
 
 
 #Pruebas de Comparaciones Múltiple (Pruebas Postanova)
-library(agricolae)
-#Prueba de Fisher 
-LSD.test(mod,"Lote", alpha = 0.05, console=TRUE, group=FALSE)
-#Grupos
-LSD.test(mod,"Lote", alpha = 0.05, console=TRUE, group=TRUE)
-
-#CUANDO NO SE CUMPLE EL SUPUESTO DE NORMALIDAD:
-#Prueba No Paramétrica de Kruskal-Wallis(no importa el supuesto de normalidad, pero debe cumplirse el supuesto de homogeneidad de varianzas)
-kruskal.test(Calcio~Lote, data=datos)
-
-#Prueba de comparación múltiple cuando algunos valores de la variable respuesta son iguales (hay empates).
-library(PMCMR)
-posthoc.kruskal.nemenyi.test(x=datos$Calcio, g=datos$Lote, dist="Chisquare")
+library(multcompView)
+library(lsmeans)
+leastsquare=lsmeans(mod, "Agente", adjust="fisher")
+cld(leastsquare, alpha=.05, Letters=letters)
 
 #----------------------------------------------------#
 #Punto 2
-#DATOS
-trabajador=c(rep("1",6),rep("2",6),rep("3",6),rep("4",6),rep("5",6))
-y=c(45,47,43,48,50,44,52,55,58,49,47,57,39,37,46,45,42,41,57,49,52,50,48,55,48,44,55,53,49,52)
-datos=data.frame(matrix(c(trabajador,y),ncol=2,nrow=length(y)))
-#Descriptivos
-tr=data.frame(matrix(y,ncol = 5,nrow = 6))
-colnames(tr)=c(seq(1:5))
-summary(tr) #descriptivas
-de=sqrt(diag(var(tr)))*(((6-1)/6)^2)#desviacion
-#vector de medias
-ma=c(mean(tr$`1`),mean(tr$`2`),mean(tr$`3`),mean(tr$`4`),mean(tr$`5`))
-cv=(de/ma)*100#coeficiente de variacion %
-#grafico
-library(ggplot2)
-x11()
-p<-ggplot(datos, aes(trabajador, y)) + geom_point()
-p + scale_x_discrete(name="trabajador",
-                     labels=c("1","2","3","4","5")) + labs(y="Unidades / periodo")
-x11()
-#Incluye la media en el gráfico
-p<-ggplot(datos, aes(trabajador, y)) + geom_point()
-p + scale_x_discrete(name="trabajador",
-                     labels=c("1","2","3","4","5")) + labs(y="Unidades / periodo") +
-  stat_summary(fun.y=mean, colour="red", geom="point", shape=19, size=2)
 
-#Construimos el modelo y obtenemos la ANOVA:
-mod<-aov(y~trabajador, data=datos)
-summary(mod)
-
-#Si no se cumplen los supuestos, no sirve interpretar los resultados de la ANOVA
-
-#Verificamos los supuestos:
-#Se obtienen los residuales:
-resid<-residuals(mod)
-
-#Normalidad:
-#Pruebas gráficas:
-install.packages("carData")
-library(car)
-x11()
-par(mfrow=c(1,2))
-hist(resid, freq=FALSE)
-curve(dnorm(x,mean(resid), sd(resid)), xlim=c(-8,6), add=TRUE, col=2)
-
-qqPlot(resid, pch=20)
-
-#Prueba formal
-#Shapiro
-shapiro.test(resid) 
-
-#Media Cero
-t.test(resid, mu = 0, alternative = c("two.sided"))
-
-#Homogeneidad de Varianzas
-#Bajo normalidad utilizar Barlett
-bartlett.test(resid~trabajador, data=datos) 
-
-#Homocedasticidad de los residuos
-x11()
-plot(mod$fitted.values, rstandard(mod), main="Valores ajustados vs Residuos",xlab = "Valores Ajustados",ylab = "Residuos Estandarizados")
-abline(h=0, col="red") ## traza una línea horizontal (h) por el Y=0
-
-#Prueba de rachas: H0:Los residuales se distribuyen de manera aleatoria
-library("tseries")
-residualesfactor<-c()
-for (i in 1:length(residuals(mod))) {
-  if (residuals(mod)[i]>0){
-    residualesfactor[i]=1
-  }
-  if (residuals(mod)[i]<0){
-    residualesfactor[i]=-1
-  }
-}
-runs.test(factor(residualesfactor))
-
-#Pruebas de Comparaciones Múltiple (Pruebas Postanova)
-install.packages("lsmeans")
-install.packages("emmean")
-install.packages("multcompView")
-#CÓDIGO ALTERNO:
-library(lsmeans)
-library(emmeans)
-Comp1<-lsmeans(mod,~trabajador)
-pairs(Comp1)
-
-library(multcompView)
-cld(Comp1, alpha=0.05, Letters=letters)
-
-#CUANDO NO SE CUMPLE EL SUPUESTO DE HOMOGENEIDAD DE VARIANZA
-install.packages("nlme")
-library(nlme)
-#modelo
-mod_heterog<-gls(y~1+trabajador,
-                 weight=varComb(varIdent(form=~1|trabajador)),
-                 data=datos)
-summary(mod_heterog)
-#ANOVA
-anova(mod_heterog)
-
-#post-ANOVA
-Comp2<-lsmeans(mod_heterog,~trabajador)
-pairs(Comp2, adjust="tukey")
-
-cld(Comp2, alpha=0.05, Letters=letters, adjust="tukey")
-
-#comparacion de modelos
-mod_hom<-gls(y~1+trabajador, data=datos, method="ML")
-
-mod_het<-gls(y~1+trabajador,
-             weight=varComb(varIdent(form=~1|trabajador)),
-             data=datos, method="ML")
-
-anova(mod_hom, mod_het)
-
-#-------------------------------------------------------#
-#Punto 3
-data<- matrix(data = c(5,9,7,3,8,4,8,13,9,4,6,8), ncol = 4, nrow = 3, byrow = FALSE) # se crea la matriz para sacar las descriptivas
-colnames(data)<-c("A","B","C","D") # se le pone nombre a las columnas de la matriz de datos
-descrip<- summary(data) # saca las descriptivas de cada una de las columnas (Variables) de la matriz
-sd(data[,1]) # desviacion estandar de cada columna (Variables) de la matriz de datos
-sd(data[,2])
-sd(data[,3])
-sd(data[,4])
-CV1<-(sd(data[,1])/mean(data[,1])) # coeficiente de variacion de cada una de las columnas (Variables) de la matriz de datos
-CV2<-(sd(data[,2])/mean(data[,2]))
-CV3<-(sd(data[,3])/mean(data[,3]))
-CV4<-(sd(data[,4])/mean(data[,4]))
-
-library(ggplot2) # Libreria para hacer graficas
-
-data2<-read.table("clipboard", header=TRUE, dec=".") # tabla para hacer los graficos y las ANOVA
-attach(data2)
-
-
-p<-ggplot(data2, aes(Producto,Resistencia)) + geom_point()
-p + scale_x_discrete(name="Producto quimico",
-                     labels=c("A","B","c","D")) + labs(y="Resistencia") # Crea un grafico en el cual muestra las observaciones de cada grupo o variable
-
-p + scale_x_discrete(name="Producto quimico",
-                     labels=c("A","B","C","D")) + labs(y="Resistencia") +
-  stat_summary(fun.y=mean, colour="red", geom="point", shape=19, size=2) # pone el punto promedio de cada uno de los grupos en la grafica anterior
-
-# Normalidad
-
-resid<-residuals(mod) # Saca los residuales del modelo planteado
-
-hist(resid, freq=FALSE) # crea un histograma de los residuales
-curve(dnorm(x,mean(resid), sd(resid)), xlim=c(-2,3), add=TRUE, col=2) # le ajusta una curva de una distribucion normal para saber si los residuales se ajustan a esta distribucion
-
-library(car)
-
-qqPlot(resid, pch=20) # hace un QQ-plot con unas bandas de un intervalo de confianza para ver si los residuales se comportan de manera normal
-
-shapiro.test(resid) # prueba estadistica para comprobar la normalidad de los residuales
-
-#Correcta especificacion
-t.test(resid, mu = 0, alternative = c("two.sided"))
-
-# Homocedasticidad
-leveneTest(resid~Producto, data=data2)
-
-
-#Independencia
-library("tseries")
-residualesfactor<-c()
-for (i in 1:length(residuals(mod))) {
-  if (residuals(mod)[i]>0){
-    residualesfactor[i]=1
-  }
-  if (residuals(mod)[i]<0){
-    residualesfactor[i]=-1
-  }
-}
-runs.test(factor(residualesfactor))
-
-kruskal.test(Resistencia~Producto, data=data2) # hace una prueba ANOVA no parametrica
