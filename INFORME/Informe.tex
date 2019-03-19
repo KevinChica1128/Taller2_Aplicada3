@@ -475,6 +475,40 @@ OPERARIO&  & MAQUINA (B) &  &  \\
 \end{tabular} 
 \end{center}
 
+~\\ Como se puede notar en la tabla los operarios tienen una media muy cercana lo que nos indicaría que no hay mucha diferencia entre ellos, mas sin embargo, podemos decir que de los tres operarios el tercer operario tiene una media un poco mayor que los otros así que puede haber una diferencia, tambien quiza basado en que este operario tiene una mayor variabilidad.
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+\hline 
+  Maquina& Mín & Q1 & Mediana & Media & Q3 & Máx & Des. Estándar & CV(\%)  \\ 
+\hline 
+1 &	109 &	110 &	111 & 111.8 &	113.5 &	116 &	2.71416 &	2.4276923 \\
+2 &	110 &	110.2 &	111.5 &	112.2 &	114.2 & 115 &	2.316607 &	2.0647121 \\
+3 & 108 & 109 & 110 & 111.7 & 113.2 & 119 & 4.179314 &	3.7415523 \\
+4 & 108 & 110.5 & 113 & 113.5 & 116.2 & 120 & 4.460942 & 3.9303453 \\
+\hline 
+\end{tabular} 
+\end{center}
+
+~\\ En esta tabla para describir el factor de las maquinas podemos notar que el valor medio de las maquinas es muy parecido, notando que la maquina 4 tiene una desviación estándar un poco mayor que los demás y a su vez un coeficiente de variación también un poco mayor, también notamos que tiene un rango un mayor que el rango en el que se mueven las otras maquinas 
+
+\item[d.]
+~\\Se plantea el siguiente modelo:
+\begin{center}
+$y_{ijk}=\mu+\alpha_i+\beta_j+\alpha_i*\beta_j+\varepsilon_{ijk}$ \;\;\; $i=1,2,3$ \;\;\; $j=1,2$\;\;\; $k=1,...,8$
+\end{center}
+~\\El cuál se construye bajo los siguientes supuestos:
+\begin{center}
+$\varepsilon_{ij}\approx N(0,\sigma^2),\;\; E[\varepsilon_{ij}]=0 \;\;\; \forall_{ij}, \;\; V[\varepsilon_{ij}]=\sigma^2, \;\; cov[\varepsilon_{ij},\varepsilon_{i'j'}]=0$
+\end{center}
+~\\Donde:
+~\\$y_{ijk}=$Porcentaje k-esimo de O2 en el agua el cual tiene un porcentaje  i-esimo de agua de mar y un tipo de molusco j .
+~\\$\mu=$Media general de porcentaje de O2  sin tener en cuenta la concentración de agua de mar ni el tipo de molusco.
+~\\$\alpha_i=$Efecto del i-ésimo porcentaje de concentración sobre el porcentaje de O2(consumo).
+~\\$\beta_j=$Efecto del j-ésimo tipo de molusco sobre el porcentaje de O2(consumo).
+~\\$\alpha_i*\beta_j=$Efecto de la interacción entre la concentración y el tipo de molusco sobre el porcentaje de O2(consumo)
+~\\$\varepsilon_{ij}=$Error aleatorio debido al i-ésimo proncetaje de concentracion y a el j-ésimo tipo de molusco.
+
 \end{itemize}
 
 \section{Punto 4}
