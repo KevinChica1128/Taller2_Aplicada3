@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6930 64-bit) (preloaded format=pdflatex 2019.1.24)  18 MAR 2019 20:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6930 64-bit) (preloaded format=pdflatex 2019.1.24)  18 MAR 2019 20:22
 entering extended mode
 **./Informe.tex
 (Informe.tex
@@ -563,40 +563,33 @@ File: FigurasUV/HyQ2.pdf Graphic file (type pdf)
 Package pdftex.def Info: FigurasUV/HyQ2.pdf  used on input line 385.
 (pdftex.def)             Requested size: 177.06415pt x 152.47191pt.
  [7 <./FigurasUV/HyQ2.pdf>]
-<FigurasUV/P4.png, id=69, 433.62pt x 165.61874pt>
+[8]
+<FigurasUV/P4.png, id=72, 433.62pt x 165.61874pt>
 File: FigurasUV/P4.png Graphic file (type png)
 <use FigurasUV/P4.png>
-Package pdftex.def Info: FigurasUV/P4.png  used on input line 437.
+Package pdftex.def Info: FigurasUV/P4.png  used on input line 456.
 (pdftex.def)             Requested size: 216.80946pt x 82.80916pt.
-
-[8]
-<FigurasUV/H4.pdf, id=73, 505.89pt x 417.56pt>
+ [9 <./FigurasUV/P4.png>]
+<FigurasUV/H4.pdf, id=76, 505.89pt x 417.56pt>
 File: FigurasUV/H4.pdf Graphic file (type pdf)
 <use FigurasUV/H4.pdf>
-Package pdftex.def Info: FigurasUV/H4.pdf  used on input line 488.
+Package pdftex.def Info: FigurasUV/H4.pdf  used on input line 507.
 (pdftex.def)             Requested size: 252.94437pt x 208.77948pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<FigurasUV/I4.pdf, id=74, 505.89pt x 406.51875pt>
+<FigurasUV/I4.pdf, id=77, 505.89pt x 406.51875pt>
 File: FigurasUV/I4.pdf Graphic file (type pdf)
 <use FigurasUV/I4.pdf>
-Package pdftex.def Info: FigurasUV/I4.pdf  used on input line 494.
+Package pdftex.def Info: FigurasUV/I4.pdf  used on input line 513.
 (pdftex.def)             Requested size: 252.94437pt x 203.25887pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[9 <./FigurasUV/P4.png>] [10 <./FigurasUV/H4.pdf> <./FigurasUV/I4.pdf>]
+ [10 <./FigurasUV/H4.pdf> <./FigurasUV/I4.pdf>]
 <FigurasUV/HyQ4.pdf, id=88, 505.89pt x 470.75874pt>
 File: FigurasUV/HyQ4.pdf Graphic file (type pdf)
 <use FigurasUV/HyQ4.pdf>
-Package pdftex.def Info: FigurasUV/HyQ4.pdf  used on input line 535.
+Package pdftex.def Info: FigurasUV/HyQ4.pdf  used on input line 554.
 (pdftex.def)             Requested size: 177.06415pt x 164.76802pt.
 
-[11 <./FigurasUV/HyQ4.pdf>]
+[11 <./FigurasUV/HyQ4.pdf>] [12]
 No file Informe.bbl.
-[12] [13] (Informe.aux
+[13] (Informe.aux
 LaTeX Info: Redefining \. on input line 6.
 LaTeX Info: Redefining \% on input line 6.
 ) ) 
@@ -629,7 +622,7 @@ cal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Ale
 jandro/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy5.p
 fb><C:/Users/Alejandro/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/ams
 fonts/cm/cmsy7.pfb>
-Output written on Informe.pdf (13 pages, 238587 bytes).
+Output written on Informe.pdf (13 pages, 238798 bytes).
 PDF statistics:
  396 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
