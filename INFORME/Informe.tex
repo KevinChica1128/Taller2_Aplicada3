@@ -189,7 +189,7 @@ Cobre&	66,4&	68&	69,0&	70,2&	72,7&	74,5&	3,109892051&	4,430947356\\
 
 \begin{figure}[h!]
   \centering
-  \includegraphics[scale=0.5]{FigurasUV/D1.pdf}
+  \includegraphics[scale=0.45]{FigurasUV/D1.pdf}
 \end{figure}
 ~\\En ésta gráfica se confirman las interpretaciones dadas anteriormente, los agentes soldantes Niquel y Cobre, son muy parecidos en cuanto a su media y su comportamiento en general con respecto a la fuerza necesaria para soldar los lingotes, mientras que el agente soldante Hierro, tiene una media más elevada y una dispersión mayor, lo que significa que con este agente soldante se necesita mayor fuerza para soldar los lingotes.
 
@@ -227,7 +227,7 @@ $$cov[\varepsilon_{ij},\varepsilon_{i'j'}]=0 \;\;\; \forall_{i\neq i'}  \;\; \we
 \item[-]Normalidad: Para probar el supuesto de normalidad, se realizarán dos pruebas gráficas (histograma y QQ-plot) y una prueba estadística(Shapiro Wilk).
 \begin{figure}[h!]
   \centering
-  \includegraphics[scale=0.35]{FigurasUV/N1.pdf}
+  \includegraphics[scale=0.45]{FigurasUV/N1.pdf}
 \end{figure}
 ~\\En estas gráficas no se observa un incumplimiento claro de este supuesto, ya que en el QQplot se observa que los puntos no se salen de los intervalos de confianza de la recta de cuantiles teórica de la distribución normal y en el histograma no se ve un comportamiento muy diferente a una distribución normal. Sin embargo, las pruebas gráficas no son muy convincentes ya que su interpretación puede ser distinta de una persona a otra y depende mucho de la experiencia del investigador. Por ello se acude a la prueba formal.
  
@@ -247,12 +247,12 @@ $$t = 1.9109e-16, df = 24, p-value = 1$$
 \item[-]Homocedasticidad:Para analizar la homocedasticidad se realizó una gráfica(Residuos estandarizados por agente soldante) y una prueba estadística (Test de Barlett)
 \begin{figure}[h!]
   \centering
-  \includegraphics[scale=0.35]{FigurasUV/H1.pdf}
+  \includegraphics[scale=0.45]{FigurasUV/H1.pdf}
 \end{figure}
 ~\\En esta gráfica se observa que para el agente soldante Niquel, la dispersión de los puntos(residuales estandarizados) es menor que la de los otros dos agentes soldantes(Hierro y Cobre) las cuales son muy parecidas, por lo que se pensaría que este supuesto podría incumplirse, sin embargo se realiza la prueba formal, la cual se espera que tenga un p valor no tan alto, por el gráfico obtenido anteriormente.
 
 \item[*]Prueba de Barlett:$$H_0:Las\;varianzas\;de\;todos\;los\;grupos\;son\;iguales$$
-$$H_a:Al\;menos\;una\;de las\; varianzas\;es\;diferente$$
+$$H_a:Al\;menos\;una\;de\; las\; varianzas\;es\;diferente$$
 $$Bartlett's \; K-squared = 4.3295, df = 2, p-value = 0.1148$$
 
 ~\\Como el p-valor=0.1148 es superior a nuestro nivel de significancia $\alpha=0.05$, no se rechaza la hipótesis nula, y concluimos que no hay evidencia estadística suficiente para decir que al menos entre dos grupos la varianza es diferente, lo que nos indica que este supuesto de homocedasticidad en los errores no se incumple.
@@ -305,12 +305,12 @@ Agente & lsmean &  SE &df& lower.CL& upper.CL& .group\\
 
 \begin{figure}[h!]
   \centering
-  \includegraphics[scale=0.5]{FigurasUV/P2.png}
+  \includegraphics[scale=0.55]{FigurasUV/P2.png}
 \end{figure}
 
 \begin{itemize}
 \item[a.]
-~\\En este caso se podría proponer en principio un diseño factorial pero dado que solo se tiene una replica por cada combinación de los niveles de los factores, osea una replica por tratamiento y lo que en realidad se quiere evaluar es la respuesta del desarrollo de las plantas de algodón ante las distintas dosis de Herbicida, se podría proponer mejor un diseño por bloques donde el Insecticida sea un control.
+~\\En este caso se podría proponer en principio un diseño factorial pero dado que solo se tiene una réplica por cada combinación de los niveles de los factores, y lo que en realidad se quiere evaluar es la respuesta del desarrollo de las plantas de algodón ante las distintas dosis de herbicida, se podría proponer mejor un diseño por bloques donde el insecticida sea un factor de control y el interés se centré totalmente en el herbicida.
 
 \item[b.]
 \begin{itemize}
@@ -325,7 +325,7 @@ Agente & lsmean &  SE &df& lower.CL& upper.CL& .group\\
 
 \item[c.]
 ~\\\textbf{Estadísticas descriptivas:}
-~\\Como acordamos que el mejor es un DBCA entonces nos interesa al final conocer el efecto del Herbicida sobre el crecimiento de la planta de algodón y no el Insecticida(bloques o control), así pues hacemos descriptivas respecto a el Herbicida:
+~\\Como acordamos que el mejor diseño es un DBCA, entonces nos interesa al final conocer el efecto del herbicida sobre el crecimiento de la planta de algodón y no el insecticida(bloques o control), por lo tanto realizamos descriptivas respecto al herbicida:
 \begin{center}
 \begin{tabular}{|c|c|c|c|c|c|c|c|c|}
 \hline 
@@ -382,9 +382,9 @@ $$cov[\varepsilon_{ij},\varepsilon_{i'j'}]=0 \;\;\; \forall_{i\neq i'}  \;\; \we
 \item[-]Normalidad: Para probar el supuesto de normalidad, se realizarán dos pruebas gráficas (histograma y QQ-plot) y una prueba estadística(Shapiro Wilk).
 \begin{figure}[h!]
   \centering
-  \includegraphics[scale=0.35]{FigurasUV/HyQ2.pdf}
+  \includegraphics[scale=0.5]{FigurasUV/HyQ2.pdf}
 \end{figure}
-~\\En estas gráficas no se observa un incumplimiento claro de este supuesto, ya que en el QQplot se observa que los puntos no se salen de los intervalos de confianza de la recta de cuantiles teórica de la distribución normal y en el histograma no se ve un comportamiento muy diferente a una distribución normal. Sin embargo, las pruebas gráficas no son muy convincentes  Por ello se acude a la prueba formal.
+~\\En estas gráficas se observa un posible incumplimiento de este supuesto, ya que en el QQplot se logra ver que algunos puntos se salen o están muy cerca de los limites de los intervalos de confianza de la recta de cuantiles teórica de la distribución normal y en el histograma se ve un comportamiento muy diferente a una distribución normal en la cola derecha. Sin embargo, las pruebas gráficas no son muy convincentes por ello se acude a la prueba formal.
  
 \item[*]Test Shapiro-Wilk:$$H_0:Los\; datos\; provienen\; de\; una\; distribucion\; normal$$
 $$H_a:Los\; datos\; no\; provienen\; de\; una\; distribucion\; normal$$
@@ -399,7 +399,7 @@ $$t = 6.8721e-17, df = 47, p-value = 1$$
 ~\\Como el p-valor=1 es superior a nuestro nivel de significancia $\alpha=0.05$, no se rechaza la hipótesis nula, y se verifica lo dicho anteriormente. 
 
 
-\item[-]Homocedasticidad:Para analizar la homocedasticidad se realizó una prueba estadística Test de Levene ya que la prueba de Barlett es sensible a las desviaciones de la normalidad y como tenemos que nuestros errores no cumplen el supuesto de normalidad esta prueba (Prueba de Barlett) serviría únicamente para probar normalidad.
+\item[-]Homocedasticidad:Para analizar la homocedasticidad se realizó una prueba estadística (Test de Levene) ya que la prueba de Barlett es sensible a las desviaciones de la normalidad y como tenemos que nuestros errores no cumplen el supuesto de normalidad, los resultados de la prueba de Levene son más confiables.
 
 \item[*]Prueba de Levene:$$H_0:Las\;varianzas\;de\;todos\;los\;grupos\;son\;iguales$$
 $$H_a:Al\;menos\;una\;de las\; varianzas\;es\;diferente$$
@@ -415,16 +415,15 @@ $$H_a:La \; muestra\; no \;es\; aleatoria\; (las \; observaciones \; no\;son \; 
 $$Standard \; Normal = -0.19646, p-value = 0.8443$$
 ~\\Como el p valor=0.8443 es mayor que nuestro nivel de significancia $\alpha=0.05$, no rechazamos la hipótesis nula y concluimos que no hay evidencia estadística suficiente para decir que los residuales no están distribuidos de manera aleatoria, en otras palabras, no podemos decir que no son independientes. Teniendo en cuenta esto, podemos decir que este supuesto de independencia en los errores parece no incumplirse.
 \end{itemize}
-~\\Ya que según las pruebas aplicadas, se incumple el supuesto de normalidad no podemos hacer una ANOVA porque los resultados podrían ser erróneos,por esto procedemos a realizar una prueba no parametrica (Prueba de Friedman)
+~\\Ya que según las pruebas aplicadas, se incumple el supuesto de normalidad no podemos hacer una ANOVA porque los resultados podrían ser erróneos,por esto procedemos a realizar una prueba no paramétrica (Prueba de Friedman)
 
 $$H_0:\tau_1=\tau_2=...=\tau_5=\tau$$
 $$H_1:Al\; menos\; una\; de\; las \;igualdades\; no\; se \;cumple.$$
 $$Friedman\; chi-squared = 1.3333, df = 4, p-value =  0.8557$$
 
-~\\Como el p valor=0.8557 es mayor que nuestro nivel de significancia $\alpha=0.05$, no rechazamos la hipótesis nula y concluimos que no hay evidencia estadística suficiente para decir que los diferentes 
-Herbicidas presentan efectos distintos sobre el crecimiento de la planta de algodón.
+~\\Como el p valor=0.8557 es mayor que nuestro nivel de significancia $\alpha=0.05$, no rechazamos la hipótesis nula y concluimos que no hay evidencia estadística suficiente para decir que los diferentes herbicidas presentan efectos distintos sobre el crecimiento de la planta de algodón.
 
-\item[h.]como pudimos observar no se cumplía el supuesto de Normalidad de los errores y viéndolo como un diseño por bloques el test de Friedman arrojo que no había diferencias significativas entre los tratamientos, por ende podemos concluir que independientemente de el herbicida que se utilice se  va a obtener el mismo crecimiento en las plantas de algodón por lo que en este caso seria una buena opción optar por el que resulte mas económico.
+\item[h.]como pudimos observar no se cumplía el supuesto de Normalidad de los errores y viéndolo como un diseño por bloques el test de Friedman arrojo que no había diferencias significativas entre los tratamientos, por ende podemos concluir que independientemente del herbicida que se utilice se va a obtener el mismo crecimiento en las plantas de algodón, por lo que en este caso sería una buena opción optar por el que resulte mas económico.
 
 \end{itemize}
 
@@ -475,7 +474,7 @@ OPERARIO&  & MAQUINA (B) &  &  \\
 \end{tabular} 
 \end{center}
 
-~\\ Como se puede notar en la tabla los operarios tienen una media muy cercana lo que nos indicaría que no hay mucha diferencia entre ellos, mas sin embargo, podemos decir que de los tres operarios el tercer operario tiene una media un poco mayor que los otros así que puede haber una diferencia, tambien quiza basado en que este operario tiene una mayor variabilidad.
+~\\ Como se puede notar en la tabla los operarios tienen una media muy cercana lo que nos indicaría que no hay mucha diferencia entre ellos, sin embargo, podemos decir que de los tres operarios el tercero tiene una media un poco mayor que los otros, lo que nos podría indicar la posibilidad de que exista alguna diferencia, pero quizá se deba a la variabilidad que este presenta.
 
 \begin{center}
 \begin{tabular}{|c|c|c|c|c|c|c|c|c|}
@@ -490,20 +489,21 @@ OPERARIO&  & MAQUINA (B) &  &  \\
 \end{tabular} 
 \end{center}
 
-~\\ En esta tabla para describir el factor de las maquinas podemos notar que el valor medio de las maquinas es muy parecido, notando que la maquina 4 tiene una desviación estándar un poco mayor que los demás y a su vez un coeficiente de variación también un poco mayor, también notamos que tiene un rango un mayor que el rango en el que se mueven las otras maquinas 
+~\\ En esta tabla para describir el factor de las maquinas podemos notar que el valor medio de las maquinas es muy parecido, notando que la maquina 4 tiene una media un poco mayor pero esto se puede deber a que también presenta una desviación estándar un poco mayor que los demás. En general se podría decir que con las estadísticas descriptivas no se aprecia una diferencia clara entre las maquinas.
 
+~\\
 \begin{figure}[h!]
   \centering
   \includegraphics[scale=0.5]{FigurasUV/Rplot3.jpeg}
 \end{figure}
 
-~\\ Lagrafica de efectos muestra un poco lo que hemos mencionado de que tanto se parecen entre si los operarios y las maquinas, vemos como la maquina 4 esta un poco mas alejada de la media que las otras tres y esto mismo pasa con el operario 3, lo que podría interpretarse como que habría una diferencia
+~\\ La gráfica de efectos muestra un poco lo que hemos mencionado de que tanto se parecen entre si los operarios y las maquinas, vemos como la maquina 4 esta un poco mas alejada de la media que las otras tres y esto mismo pasa con el operario 3, lo que podría interpretarse como que habría una diferencia
 entre los niveles del factor operario, y que podría presentarse una diferencia quiza menos marcada entre los niveles del factor maquina.
 
 \item[d.]
 ~\\Se plantea el siguiente modelo:
 \begin{center}
-$y_{ijk}=\mu+\alpha_i+\beta_j+\alpha_i*\beta_j+\varepsilon_{ijk}$ \;\;\; $i=1,2,3$ \;\;\; $j=1,2,3,4$\;\;\; $k=1,...,8$
+$y_{ijk}=\mu+\alpha_i+\beta_j+\alpha_i*\beta_j+\varepsilon_{ijk}$ \;\;\; $i=1,2,3$ \;\;\; $j=1,2,3,4$\;\;\; $k=1,2$
 \end{center}
 ~\\El cuál se construye bajo los siguientes supuestos:
 \begin{center}
@@ -513,21 +513,21 @@ $\varepsilon_{ij}\approx N(0,\sigma^2),\;\; E[\varepsilon_{ij}]=0 \;\;\; \forall
 ~\\$y_{ijk}=$ Es la resistencia a la ruptura de una fibra sintética con el i-ésimo Operador en la en la j.ésima maquina
 ~\\$\mu=$ Media general de resistencia a la ruptura de una fibra sintetica sin tener en cuenta la acción del i-ésimo operador en la j-ésima maquina
 ~\\$\alpha_i=$ Efecto del i-ésimo operador sobre la resistencia a la ruptura de una fibra sintética
-~\\$\beta_j=$ Efecto de la j-ésima maquina a la resistencia que tiene una fibra sintética a la ruptura
-~\\$\alpha_i*\beta_j=$ Efecto de la interacción entre el i-ésimo operador y la j-ésima maquina a la resistencia a la ruptura de una fibra sintética
+~\\$\beta_j=$ Efecto de la j-ésima maquina sobre la resistencia que tiene una fibra sintética a la ruptura
+~\\$\alpha_i*\beta_j=$ Efecto de la interacción entre el i-ésimo operador y la j-ésima maquina sobre la resistencia a la ruptura de una fibra sintética
 ~\\$\varepsilon_{ij}=$Error aleatorio debido al i-ésimo operador y a la j-ésima maquina
 \item[e.]
-~\\ La principal hipotesis que se quiere probar es para este tipo de diseño es:
+~\\ La principal hipótesis que se quiere probar para este tipo de diseño es:
 \begin{center}
 ~\\$H_0:(\alpha*\beta)_{11}=(\alpha*\beta)_{12}=...=(\alpha*\beta)_{34}$
 ~\\$H_1:$Al menos una de las igualdades no se cumple.
 \end{center}
 
-ya que principalmente nos interesa ver como cada la resistencia a la ruptura de una fibra de vidrio esta siendo afectada por cada una de estas interacciones
+ya que principalmente nos interesa ver cómo la resistencia a la ruptura de una fibra de vidrio esta siendo afectada por cada una de estas interacciones.
 
 \item[f.]
-~\\ Antes de realizar el análisis de varianza (ANOVA) primero debemos ver que los supuestos planteados para el modelo se cumplan a cabalidad y que la ANOVA que se realizara sea la adecuada, para así llegar a los resultados pertinentes.
-~\\ Los supuestos a comprobar sobre los errores seran los siguientes:
+~\\ Antes de realizar el análisis de varianza (ANOVA) primero debemos ver que los supuestos planteados para el modelo se cumplan, para evitar que la ANOVA que se realice no sea la adecuada, y lograr llegar a los resultados pertinentes.
+~\\ Los supuestos a comprobar sobre los errores serán los siguientes:
 
 $$\varepsilon_{ij}\approx N(0,\sigma^2)  \rightarrow \;\; Normalidad$$
 $$ E[\varepsilon_{ij}]=0 \;\;\; \forall_{ij} \rightarrow \;\; Correcta\; especificacion$$
@@ -535,7 +535,7 @@ $$V[\varepsilon_{ij}]=\sigma^2 \;\;\; \forall_{ij}\rightarrow \;\; Homocedastici
 $$cov[\varepsilon_{ij},\varepsilon_{i'j'}]=0 \;\;\; \forall_{i\neq i'}  \;\; \wedge \;\;\; \forall_{j\neq j'} \rightarrow \;\; Independencia$$
 
 \begin{itemize}
-\item[-] Normalidad: para probar la normalidad de los errores, que es una parte muy importante y un supuesto fundamental para la construccion de la ANOVA, lo haremos a través de dos pruebas graficas (Un Histograma y un QQ-plot) y de una prueba estadistica (Shapiro Wilk) las cuales nos llevaran a hacer una correcta interpretación.
+\item[-] Normalidad: para probar la normalidad de los errores, que es una parte muy importante y un supuesto fundamental para la construcción de la ANOVA, lo haremos a través de dos pruebas gráficas (Un Histograma y un QQ-plot) y de una prueba estadística (Shapiro Wilk) las cuales nos llevaran a hacer una correcta interpretación.
 
 \begin{figure}[h!]
   \centering
@@ -545,14 +545,14 @@ $$cov[\varepsilon_{ij},\varepsilon_{i'j'}]=0 \;\;\; \forall_{i\neq i'}  \;\; \we
   \centering
   \includegraphics[scale=0.5]{FigurasUV/Rplot2.jpeg}
 \end{figure}
-~\\ como se puede notar en las gráficas, el supuesto de normalidad no se rechazaria, ya que en el QQ-plot vemos como los puntos están cerca de la linea, y siempre se mantienen dentro de las bandas que nos indican que si los residuales se encuentran dentro de ellas no tendriamos por que pensar que no se comportan de una manera normal, cuando vemos el histograma, es un poco menos claro el cumplimiento de la normalidad, por lo tanto y para comprobarlo realizaremos la prueba estadística.
+~\\ como se puede notar en las gráficas, el supuesto de normalidad no se rechazaría, ya que en el QQ-plot vemos como los puntos están cerca de la linea, y siempre se mantienen dentro de las bandas que nos indican que si los residuales se encuentran dentro de ellas no tendríamos por que pensar que no se comportan de una manera normal. Cuando vemos el histograma, es un poco menos claro el cumplimiento de la normalidad, por lo tanto y para comprobarlo realizaremos la prueba estadística.
 
 \item[*] Test Shapiro Wilk:
 $$H_0:Los\; datos\; provienen\; de\; una\; distribucion\; normal$$
 $$H_a:Los\; datos\; no\; provienen\; de\; una\; distribucion\; normal$$
 $$W = 0.94926, p-value = 0.2611$$
 
-~\\ En el Test de Shapiro Wilk el valor-p es mas grande que el nivel de significancia podemos decir que no hay evidencia muestral suficiente para se rechaza la hipótesis nula, entonces podemos concluir que los residuales si siguen una distribución normal.
+~\\ En el Test de Shapiro Wilk el valor-p es mas grande que el nivel de significancia $\alpha=0.05$ podemos decir que no hay evidencia estadística suficiente para que se rechace la hipótesis nula, entonces podemos concluir que los residuales si siguen una distribución normal.
 
 \item[-] Correcta especificación: De acuerdo a como esta planteado el modelo estadístico, este supuesto siempre se cumple, ya que se asegura de que la esperanza de los errores siempre es 0, para mostrarlo veremos el resultado de la prueba T
 
@@ -561,16 +561,16 @@ $$H_0: La\; verdadera\; media\; es\; igual\; a\; 0 $$
 $$H_a:La\; verdadera\; media\; no\; es\; igual\; a\; 0$$
 $$t = -1.0473e-16, df = 47, p-value = 1$$
 
-~\\ Como el valor-p es 1 decimos que no se rechaza la hipótesis nula y que los residuales si tiene media 0
+~\\ Como el valor-p es 1 decimos que no se rechaza la hipótesis nula y que los residuales si tiene media 0.
 
-\item[-]Homocedasticidad: Para hacer el análisis de esta prueba se realizara el prueba estadística de el teste de Barlett, el cual trabaja sobre la hipótesis nula de que todas las varianzas son iguales.
+\item[-]Homocedasticidad: Para hacer el análisis de esta prueba se realizará la prueba estadística de Barlett, la cual trabaja sobre la hipótesis nula de que todas las varianzas son iguales.
 
 \item[*] Prueba de Barlett:
 $$H_0:Las\;varianzas\;de\;todos\;los\;grupos\;son\;iguales$$
 $$H_a:Al\;menos\;una\;de las\; varianzas\;es\;diferente$$
 $$Bartlett's \; K-squared = 4.8106, df = 11, p-value = 0.94$$
 
-~\\ Como tenemos un valor-p bastante alto, mucho mayor que nuestra significancia de 0.05 podemos decir que no se rechaza la hipótesis nula, lo que nos indica que las varianzas si son iguales.
+~\\ Como tenemos un valor-p bastante alto, mucho mayor que nuestra significancia de 0.05 podemos decir que no se rechaza la hipótesis nula, lo que nos indica que se podría considerar que las varianzas son iguales.
 
 \item[-] Independencia: Para probar el supuesto de independencia de los errores se usara el test de rachas, que probar esta supuesto por medio del test de Durbin-Watson o por medio de un correlograma es mas complejo ya que estos exigen tener el orden en el cual se obtuvieron los errores y esta información no se tiene.
 
@@ -579,10 +579,10 @@ $$H_0:La \; muestra\; es\; aleatoria\; (las \; observaciones \;son \; independie
 $$H_a:La \; muestra\; no \;es\; aleatoria\; (las \; observaciones \; no\;son \; independientes)$$
 $$Standard \; Normal = 2.5045, p-value = 0.01226$$
 
-~\\ Como podemos ver en la prueba de rachas, el supuesto de independencia si se incumple, ya que tenemos un valor-p=0.01226 y es menor que un nivel de significancia $ \alpha = 0.05 $, por lo tanto este cae en la región de rechazo, y podemos decir que no hay evidencia estadística para decir que los errores sin independientes entre si.
+~\\ Como podemos ver en la prueba de rachas, el supuesto de independencia se incumple, ya que tenemos un valor-p=0.01226 y es menor que un nivel de significancia $ \alpha = 0.05 $, por lo tanto este cae en la región de rechazo, y podemos decir que hay evidencia estadística para decir que los errores no son independientes entre si.
 \end{itemize}
 
-~\\ Después de realizadas las pruebas para los supuestos, y que ningún supuesto fundamental se incumpliera pasamos a realizar la tabla ANOVA.
+~\\ Después de realizadas las pruebas para los supuestos, y que ningún supuesto fundamental(normalidad y homocedasticidad) se incumpliera pasamos a realizar la tabla ANOVA.
 
 \begin{center}
 \begin{tabular}{|c|c|c|c|c|c|}
@@ -600,7 +600,7 @@ Residuales & 12 & 45.500 & 3.792 &    & \\
 ~\\ La interpretación mas importante que podemos hacer es que la interacción entre los factores no es significativa ya que tiene un valor-p por arriba de la significancia que es de 0.05, lo que nos indica que en conjunto los operarios y las maquinas no representan una variación o un efecto significativo en la resistencia a la ruptura de la fibra sintética, y podemos notar que para las maquinas tampoco representaría un efecto en el momento de la variación.
 
 \item[g.]
-~\\ Ya que la interacción entre los factores no resulto significativa vamos a probar los factores por separado y ver si cada uno de ellos entre sis niveles resulta significativo.
+~\\ Ya que la interacción entre los factores no resulto significativa vamos a probar los factores por separado y ver si cada uno de ellos entre sus niveles resulta significativo.
 
 \begin{center}
 \begin{tabular}{|c|c|c|c|c|c|c|}
@@ -629,8 +629,8 @@ Maquina 4 & 114 & 0.795 & 12 & 112 & 115 & a \\
 \end{center}
 ~\\ Y como podemos ver en la tabla que representan las comparaciones para el factor de las maquinas no existe ninguna diferencia entre los niveles de este factor, es decir que es consistente con los resultados que nos presento la tabla ANOVA donde se decía que este factor tampoco presentaba un efecto en el diseño.
 \item[h.]
-~\\Como conclusiones tenemos que, al realizar el experimento y los análisis de varianza, pudimos notar que la interacción entre las maquinas y los operarios no tiene un efecto que pueda ser decisivo, es decir que la resistencia a la ruptura va a estar mas afectada por el tipo de obrero que realiza el trabajo ya que como pudimos ver en las pruebas multiples para los factores por separado las maquinas tampoco tienen un efecto sobre la variabilidad que puede presentar esta resistencia a la ruptura.
-~\\ como recomendaciones, se puede decir que el experimento  debería  realizarse con un mejor sistema de aleatorización, ya que como pudimos ver al realizar la comprobación del supuesto de independencia a través de la prueba de rachas, este no se cumple, lo que nos indica que la aleatorizacion no se hizo de la mejor manera
+~\\Como conclusiones tenemos que, al realizar el experimento y los análisis de varianza, pudimos notar que la interacción entre las maquinas y los operarios no tiene un efecto que pueda ser decisivo, es decir que la resistencia a la ruptura va a estar más afectada por el tipo de operario que realiza el trabajo, ya que como pudimos ver en las pruebas múltiples para los factores por separado las maquinas tampoco tienen un efecto sobre la variabilidad que puede presentar esta resistencia a la ruptura.
+~\\ como recomendaciones, se puede decir que el experimento  debería  realizarse con un mejor sistema de aleatorización, ya que como pudimos ver al realizar la comprobación del supuesto de independencia a través de la prueba de rachas, este no se cumple, lo que nos indica que la aleatorizacion no se hizo de la mejor manera.
 \end{itemize}
 
 \section{Punto 4}
@@ -638,7 +638,7 @@ Maquina 4 & 114 & 0.795 & 12 & 112 & 115 & a \\
 
 \begin{figure}[h!]
   \centering
-  \includegraphics[scale=0.5]{FigurasUV/P4.png}
+  \includegraphics[scale=0.6]{FigurasUV/P4.png}
 \end{figure}
 
 \begin{itemize}
@@ -657,7 +657,7 @@ Maquina 4 & 114 & 0.795 & 12 & 112 & 115 & a \\
 
 \item[c.]
 ~\\\textbf{Estadísticas descriptivas:}
-~\\se obtienen descriptivas tanto para la concentración de agua de mar como para cada uno de los tipos de moluscos respecto a el proporción de O2:
+~\\se obtienen descriptivas tanto para la concentración de agua de mar como para cada uno de los tipos de moluscos respecto a la proporción de O2:
 \begin{center}
 \begin{tabular}{|c|c|c|c|c|c|c|c|c|}
 \hline 
@@ -670,7 +670,7 @@ $50\%$&6.38&10.085&11.455&12.25062&14.500&18.8&3.098041&	25.28884\\
 \hline 
 \end{tabular} 
 \end{center}
-~\\En la tabla anterior, vemos que la concentración de agua de mar tiene un coeficiente de variación grande en varios de los tratamientos lo que indica que el porcentaje de O2 varia mucho en las diferentes concentraciones. El mayor promedio de porcentaje de O2 es el que tiene una concentración de $50\%$ de agua de mar.
+~\\En la tabla anterior, vemos que la concentración de agua de mar tiene un coeficiente de variación grande en varios de los tratamientos lo que indica que el porcentaje de O2 varía considerablemente en las diferentes concentraciones. El mayor promedio de porcentaje de O2 es el que tiene una concentración de $50\%$ de agua de mar.
 
 \begin{center}
 \begin{tabular}{|c|c|c|c|c|c|c|c|c|}
@@ -691,14 +691,14 @@ B&	1.8&5.685&	8.060&	8.609167&	10.700 &17.7&	3.918164&	45.51153 \\
   \centering
   \includegraphics[scale=0.5]{FigurasUV/H4.pdf}
 \end{figure}
-~\\Para evaluar la interacciones entre los diferentes niveles de los factores utilizamos un boxplot. Podemos observar como la variabilidad en los distintos tratamientos es parecida pero sus medias toman diferentes valores donde la que mayor porcentaje de O2 tiene es la del tratamiento $50\%*B$ que es en la que se tiene un molusco de tipo B con un porcentaje de agua de mar del $50\%$, esto en principio podría indicar que tal vez este sea el tratamiento que presenta un mejor efecto, aun así si compramos los tratamientos $50\%*A$ y $50\%.B$ son las que presentan mejor porcentaje de O2 por lo que también se podría inferir a priori que la concentración 50 porciento de agua de mar es la mas significativa.
+~\\Para evaluar la interacciones entre los diferentes niveles de los factores utilizamos un boxplot. Podemos observar como la variabilidad en los distintos tratamientos es parecida pero sus medias toman diferentes valores donde la que mayor porcentaje de O2 tiene es la del tratamiento $50\%*B$ que es en la que se tiene un molusco de tipo B con un porcentaje de agua de mar del $50\%$, esto en principio podría indicar que tal vez este sea el tratamiento que presenta un mejor efecto, aun así si compramos los tratamientos $50\%*A$ y $50\%.B$ son las que presentan mejor porcentaje de O2 por lo que también se podría inferir a priori que la concentración 50\% de agua de mar es la mas significativa.
 
 \begin{figure}[h!]
   \centering
   \includegraphics[scale=0.5]{FigurasUV/I4.pdf}
 \end{figure}
 
-~\\En este gráfico podemos observar a priori que tal vez exista una interacción entre el porcentaje de agua de mar y el tipo de molusco donde el mayor porcentaje de O2 en el gua se observa cuando se tiene una concentración de agua de mar del $50\%$, sin embargo los gráficos no suelen ser muy confiables porque depende de la experiencia que tenga quien los observa, por ende esperaremos a tener la prueba ANOVA.
+~\\En este gráfico podemos observar a priori que tal vez exista una interacción entre el porcentaje de agua de mar y el tipo de molusco donde el mayor porcentaje de O2 en el agua se observa cuando se tiene una concentración de agua de mar del $50\%$, sin embargo los gráficos no suelen ser muy confiables porque depende de la experiencia que tenga quien los observa, por ende esperaremos a tener la prueba ANOVA.
 
 \item[d.]
 ~\\Se plantea el siguiente modelo:
@@ -725,7 +725,7 @@ $\varepsilon_{ij}\approx N(0,\sigma^2),\;\; E[\varepsilon_{ij}]=0 \;\;\; \forall
 \end{center}
 
 \item[f.]
-~\\Antes de realizar la ANOVA e interpretar los resultados, se comprobarán los supuestos del modelo esto para concer si el metodo a utilizar es correcto.
+~\\Antes de realizar la ANOVA e interpretar los resultados, se comprobarán los supuestos del modelo, esto para conocer si el método a utilizar es correcto.
 ~\\Sobre los errores se tienen los siguientes supuestos:
 $$\varepsilon_{ij}\approx N(0,\sigma^2)  \rightarrow \;\; Normalidad$$
 $$ E[\varepsilon_{ij}]=0 \;\;\; \forall_{ij} \rightarrow \;\; Correcta\; especificacion$$
@@ -736,15 +736,15 @@ $$cov[\varepsilon_{ij},\varepsilon_{i'j'}]=0 \;\;\; \forall_{i\neq i'}  \;\; \we
 \item[-]Normalidad: Para probar el supuesto de normalidad, se realizarán dos pruebas gráficas (histograma y QQ-plot) y una prueba estadística(Shapiro Wilk).
 \begin{figure}[h!]
   \centering
-  \includegraphics[scale=0.35]{FigurasUV/HyQ4.pdf}
+  \includegraphics[scale=0.6]{FigurasUV/HyQ4.pdf}
 \end{figure}
-~\\Podemos observar en la grafica que este supuesto se cumple claramente, observamos como el QQ-plot se apega muy bien a la recta y el histograma sigue muy de cerca la curva de una distribución normal, sin embargo se hace un prueba formal ya que las pruebas gráficas no son tan confiables.
+~\\Podemos observar en la gráfica que no hay un cumplimiento claro de este supuesto, observamos como el QQ-plot tiene algunos punto muy cercanos al la linea del intervalo y el histograma no sigue muy de cerca la curva de una distribución normal, por lo cual se hace un prueba formal para validar el supuesto de una forma más objetiva.
  
 \item[*]Test Shapiro-Wilk:$$H_0:Los\; datos\; provienen\; de\; una\; distribucion\; normal$$
 $$H_a:Los\; datos\; no\; provienen\; de\; una\; distribucion\; normal$$
 $$W = 0.95824, p-value = 0.08571$$
 
-~\\Como el p-valor=0.08571 es muy superior a nuestro nivel de significancia $\alpha=0.05$, no se rechaza la hipótesis nula, y concluimos que no hay evidencia estadística suficiente para decir que los datos no provienen de una distribución normal, lo que nos indica que este supuesto de normalidad en los errores no se incumple.
+~\\Como el p-valor=0.08571 es superior a nuestro nivel de significancia $\alpha=0.05$, no se rechaza la hipótesis nula, y concluimos que no hay evidencia estadística suficiente para decir que los datos no provienen de una distribución normal, lo que nos indica que este supuesto de normalidad en los errores no se incumple.
 \item[-]Correcta Especificación:Sabemos que este supuesto siempre se cumple, ya que el método o la construcción del modelo asegura que la esperanza de los residuales sea igual a cero, sin embargo, se realizó una prueba t para comprobarlo.
 
 \item[*]T-test:$$H_0: La\; verdadera\; media\; es\; igual\; a\; 0 $$
@@ -785,7 +785,7 @@ Residuals &   42&  368.01&   8.762&    & \\
   
 ~\\Podemos ver que la interacción entre los factores no es representativa, esto quiere decir que en conjunto la concentración de agua de mar con el tipo de molusco no tiene un efecto significativo sobre el porcentaje de O2 en el agua y se deberán analizar los factores por separado. 
 
-\item[g.]Se realizará la prueba postanova de comparaciones múltiples  para cada uno de los factores por separados ya que la interaccion es no representativa:
+\item[g.]Se realizará la prueba postanova de comparaciones múltiples  para cada uno de los factores por separados ya que la interacción no es significativa
 
 
 \begin{center}
@@ -813,9 +813,9 @@ Agente & lsmean &  SE &df& lower.CL& upper.CL& .group\\
 \end{tabular}
 \end{center}
 
-~\\Para las comparaciones de el tipo de molusco notamos que no hay diferencias y independientemente del tipo de molusco el porcentaje de O2 va a ser el mismo.
+~\\Para las comparaciones del tipo de molusco notamos que no hay diferencias, por lo que independientemente del tipo de molusco el porcentaje de O2 va a ser el mismo.
 
-\item[h.]Primero notamos que la interacción es no significativa por lo que podemos decir que en conjunto el tipo de molusco y la concentración de agua de mar no tienen ningún efecto sobre el porcentaje de O2, sin embargo viéndolo por separado la concentración si presenta un efecto significativo, siendo la concentración $50\%$ de agua de mar la que mayor porcentaje de O2 presenta, asi sin importar cual sea el tipo de molusco la concentración de agua de mar en el cual se desarrolla es la que influye en el consumo de oxigeno.
+\item[h.]Primero notamos que la interacción es no significativa por lo que podemos decir que en conjunto el tipo de molusco y la concentración de agua de mar no tienen ningún efecto sobre el porcentaje de O2, sin embargo viéndolo por separado la concentración si presenta un efecto significativo, siendo la concentración $50\%$ de agua de mar la que mayor porcentaje de O2 presenta, así sin importar cuál sea el tipo de molusco, la concentración de agua de mar en el cual se desarrolla es la que influye en el consumo de oxigeno.
 \end{itemize}
 
 
