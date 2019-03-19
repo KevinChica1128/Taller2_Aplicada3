@@ -492,23 +492,145 @@ OPERARIO&  & MAQUINA (B) &  &  \\
 
 ~\\ En esta tabla para describir el factor de las maquinas podemos notar que el valor medio de las maquinas es muy parecido, notando que la maquina 4 tiene una desviación estándar un poco mayor que los demás y a su vez un coeficiente de variación también un poco mayor, también notamos que tiene un rango un mayor que el rango en el que se mueven las otras maquinas 
 
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale=0.5]{FigurasUV/Rplot3.jpeg}
+\end{figure}
+
+~\\ Lagrafica de efectos muestra un poco lo que hemos mencionado de que tanto se parecen entre si los operarios y las maquinas, vemos como la maquina 4 esta un poco mas alejada de la media que las otras tres y esto mismo pasa con el operario 3, lo que podría interpretarse como que habría una diferencia
+entre los niveles del factor operario, y que podría presentarse una diferencia quiza menos marcada entre los niveles del factor maquina.
+
 \item[d.]
 ~\\Se plantea el siguiente modelo:
 \begin{center}
-$y_{ijk}=\mu+\alpha_i+\beta_j+\alpha_i*\beta_j+\varepsilon_{ijk}$ \;\;\; $i=1,2,3$ \;\;\; $j=1,2$\;\;\; $k=1,...,8$
+$y_{ijk}=\mu+\alpha_i+\beta_j+\alpha_i*\beta_j+\varepsilon_{ijk}$ \;\;\; $i=1,2,3$ \;\;\; $j=1,2,3,4$\;\;\; $k=1,...,8$
 \end{center}
 ~\\El cuál se construye bajo los siguientes supuestos:
 \begin{center}
-$\varepsilon_{ij}\approx N(0,\sigma^2),\;\; E[\varepsilon_{ij}]=0 \;\;\; \forall_{ij}, \;\; V[\varepsilon_{ij}]=\sigma^2, \;\; cov[\varepsilon_{ij},\varepsilon_{i'j'}]=0$
+$\varepsilon_{ij}\approx N(0,\sigma^2),\;\; E[\varepsilon_{ij}]=0 \;\;\; \forall_{ij}, \;\; V[\varepsilon_{ij}]=\sigma^2, \;\; cov[\varepsilon_{ij},\varepsilon_{i'j'}]=0\; con\; i \neq i^{'}\; y\; j \neq j^{'}$
 \end{center}
 ~\\Donde:
-~\\$y_{ijk}=$Porcentaje k-esimo de O2 en el agua el cual tiene un porcentaje  i-esimo de agua de mar y un tipo de molusco j .
-~\\$\mu=$Media general de porcentaje de O2  sin tener en cuenta la concentración de agua de mar ni el tipo de molusco.
-~\\$\alpha_i=$Efecto del i-ésimo porcentaje de concentración sobre el porcentaje de O2(consumo).
-~\\$\beta_j=$Efecto del j-ésimo tipo de molusco sobre el porcentaje de O2(consumo).
-~\\$\alpha_i*\beta_j=$Efecto de la interacción entre la concentración y el tipo de molusco sobre el porcentaje de O2(consumo)
-~\\$\varepsilon_{ij}=$Error aleatorio debido al i-ésimo proncetaje de concentracion y a el j-ésimo tipo de molusco.
+~\\$y_{ijk}=$ Es la resistencia a la ruptura de una fibra sintética con el i-ésimo trabajador en la en la j.ésima maquina
+~\\$\mu=$ Media general de resistencia a la ruptura de una fibra sintetica sin tener en cuenta la acción del i-ésimo trabajador en la j-ésima maquina
+~\\$\alpha_i=$ Efecto del i-ésimo trabajador sobre la resistencia a la ruptura de una fibra sintética
+~\\$\beta_j=$ Efecto de la j-ésima maquina a la resistencia que tiene una fibra sintética a la ruptura
+~\\$\alpha_i*\beta_j=$ Efecto de la interacción entre el i-ésimo trabajador y la j-ésima maquina a la resistencia a la ruptura de una fibra sintética
+~\\$\varepsilon_{ij}=$Error aleatorio debido al i-ésimo trabajador y a la j-ésima maquina
+\item[e.]
+~\\ La principal hipotesis que se quiere probar es para este tipo de diseño es:
+\begin{center}
+~\\$H_0:(\alpha*\beta)_{11}=(\alpha*\beta)_{12}=...=(\alpha*\beta)_{34}$
+~\\$H_1:$Al menos una de las igualdades no se cumple.
+\end{center}
 
+ya que principalmente nos interesa ver como cada la resistencia a la ruptura de una fibra de vidrio esta siendo afectada por cada una de estas interacciones
+
+\item[f.]
+~\\ Antes de realizar el análisis de varianza (ANOVA) primero debemos ver que los supuestos planteados para el modelo se cumplan a cabalidad y que la ANOVA que se realizara sea la adecuada, para así llegar a los resultados pertinentes.
+~\\ Los supuestos a comprobar sobre los errores seran los siguientes:
+
+$$\varepsilon_{ij}\approx N(0,\sigma^2)  \rightarrow \;\; Normalidad$$
+$$ E[\varepsilon_{ij}]=0 \;\;\; \forall_{ij} \rightarrow \;\; Correcta\; especificacion$$
+$$V[\varepsilon_{ij}]=\sigma^2 \;\;\; \forall_{ij}\rightarrow \;\; Homocedasticidad$$ 
+$$cov[\varepsilon_{ij},\varepsilon_{i'j'}]=0 \;\;\; \forall_{i\neq i'}  \;\; \wedge \;\;\; \forall_{j\neq j'} \rightarrow \;\; Independencia$$
+
+\begin{itemize}
+\item[-] Normalidad: para probar la normalidad de los errores, que es una parte muy importante y un supuesto fundamental para la construccion de la ANOVA, lo haremos a través de dos pruebas graficas (Un Histograma y un QQ-plot) y de una prueba estadistica (Shapiro Wilk) las cuales nos llevaran a hacer una correcta interpretación.
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale=0.5]{FigurasUV/Rplot1.jpeg}
+\end{figure}
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale=0.5]{FigurasUV/Rplot2.jpeg}
+\end{figure}
+~\\ como se puede notar en las gráficas, el supuesto de normalidad no se rechazaria, ya que en el QQ-plot vemos como los puntos están cerca de la linea, y siempre se mantienen dentro de las bandas que nos indican que si los residuales se encuentran dentro de ellas no tendriamos por que pensar que no se comportan de una manera normal, cuando vemos el histograma, es un poco menos claro el cumplimiento de la normalidad, por lo tanto y para comprobarlo realizaremos la prueba estadística.
+
+\item[*] Test Shapiro Wilk:
+$$H_0:Los\; datos\; provienen\; de\; una\; distribucion\; normal$$
+$$H_a:Los\; datos\; no\; provienen\; de\; una\; distribucion\; normal$$
+$$W = 0.94926, p-value = 0.2611$$
+
+~\\ En el Test de Shapiro Wilk el valor-p es mas grande que el nivel de significancia podemos decir que no hay evidencia muestral suficiente para se rechaza la hipótesis nula, entonces podemos concluir que los residuales si siguen una distribución normal.
+
+\item[-] Correcta especificación: De acuerdo a como esta planteado el modelo estadístico, este supuesto siempre se cumple, ya que se asegura de que la esperanza de los errores siempre es 0, para mostrarlo veremos el resultado de la prueba T
+
+\item[*] T-test:
+$$H_0: La\; verdadera\; media\; es\; igual\; a\; 0 $$
+$$H_a:La\; verdadera\; media\; no\; es\; igual\; a\; 0$$
+$$t = -1.0473e-16, df = 47, p-value = 1$$
+
+~\\ Como el valor-p es 1 decimos que no se rechaza la hipótesis nula y que los residuales si tiene media 0
+
+\item[-]Homocedasticidad: Para hacer el análisis de esta prueba se realizara el prueba estadística de el teste de Barlett, el cual trabaja sobre la hipótesis nula de que todas las varianzas son iguales.
+
+\item[*] Prueba de Barlett:
+$$H_0:Las\;varianzas\;de\;todos\;los\;grupos\;son\;iguales$$
+$$H_a:Al\;menos\;una\;de las\; varianzas\;es\;diferente$$
+$$Bartlett's \; K-squared = 4.8106, df = 11, p-value = 0.94$$
+
+~\\ Como tenemos un valor-p bastante alto, mucho mayor que nuestra significancia de 0.05 podemos decir que no se rechaza la hipótesis nula, lo que nos indica que las varianzas si son iguales.
+
+\item[-] Independencia: Para probar el supuesto de independencia de los errores se usara el test de rachas, que probar esta supuesto por medio del test de Durbin-Watson o por medio de un correlograma es mas complejo ya que estos exigen tener el orden en el cual se obtuvieron los errores y esta información no se tiene.
+
+\item[*] Test de Rachas
+$$H_0:La \; muestra\; es\; aleatoria\; (las \; observaciones \;son \; independientes)$$
+$$H_a:La \; muestra\; no \;es\; aleatoria\; (las \; observaciones \; no\;son \; independientes)$$
+$$Standard \; Normal = 2.5045, p-value = 0.01226$$
+
+~\\ Como podemos ver en la prueba de rachas, el supuesto de independencia si se incumple, ya que tenemos un valor-p=0.01226 y es menor que un nivel de significancia $ \alpha = 0.05 $, por lo tanto este cae en la región de rechazo, y podemos decir que no hay evidencia estadística para decir que los errores sin independientes entre si.
+\end{itemize}
+
+~\\ Después de realizadas las pruebas para los supuestos, y que ningún supuesto fundamental se incumpliera pasamos a realizar la tabla ANOVA.
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+ &Df&  Sum Sq& Mean Sq &F value & Pr(>F)\\   
+\hline 
+Operario & 2 & 160.333 & 80.167 & 21.1429& 0.0001167 ***\\ 
+Maquina & 3& 12.458 & 4.153 & 1.0952 & 0.3887526\\
+Operario*Maquina & 6 & 44.667 & 7.444 & 1.9634 & 0.1506807\\
+Residuales & 12 & 45.500 & 3.792 &    & \\
+\hline 
+\end{tabular} 
+\end{center} 
+
+~\\ La interpretación mas importante que podemos hacer es que la interacción entre los factores no es significativa ya que tiene un valor-p por arriba de la significancia que es de 0.05, lo que nos indica que en conjunto los operarios y las maquinas no representan una variación o un efecto significativo en la resistencia a la ruptura de la fibra sintética, y podemos notar que para las maquinas tampoco representaría un efecto en el momento de la variación.
+
+\item[g.]
+~\\ Ya que la interacción entre los factores no resulto significativa vamos a probar los factores por separado y ver si cada uno de ellos entre sis niveles resulta significativo.
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+Operario & lsmean &  SE &df& lower.CL& upper.CL& .group\\
+\hline
+ Operario 1 & 110 & 0.688 & 12 & 108 & 111 & a \\    
+ Operario 2 & 111 & 0.688 & 12 & 110 & 113 & a  \\   
+ Operario 3 & 116 & 0.688 & 12 & 114 & 117 &  b  \\ 
+\hline
+\end{tabular}
+\end{center}
+~\\ Como lo muestra la tabla, al comparar los niveles del factor operario se puede ver que existe una diferencia entre el operario 3 con respecto a los operarios 1 y 2
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+Operario & lsmean &  SE &df& lower.CL& upper.CL& .group\\
+\hline
+Maquina 1 & 112 & 0.795 & 12 & 110 & 113 & a \\    
+Maquina 2 & 112 & 0.795 & 12 & 110 & 114 & a \\   
+Maquina 3 & 112 & 0.795 & 12 & 110 & 114 & a \\ 
+Maquina 4 & 114 & 0.795 & 12 & 112 & 115 & a \\
+\hline
+\end{tabular}
+\end{center}
+~\\ Y como podemos ver en la tabla que representan las comparaciones para el factor de las maquinas no existe ninguna diferencia entre los niveles de este factor, es decir que es consistente con los resultados que nos presento la tabla ANOVA donde se decía que este factor tampoco presentaba un efecto en el diseño.
+\item[h.]
+Como conclusiones tenemos que, al realizar el experimento y los análisis de varianza, pudimos notar que la interacción entre las maquinas y los operarios no tiene un efecto que pueda ser decisivo, es decir que la resistencia a la ruptura va a estar mas afectada por el tipo de obrero que realiza el trabajo ya que como pudimos ver en las pruebas multiples para los factores por separado las maquinas tampoco tienen un efecto sobre la variabilidad que puede presentar esta resistencia a la ruptura.
+~\\ como recomendaciones, se puede decir que el experimento  debería  realizarse con un mejor sistema de aleatorización, ya que como pudimos ver al realizar la comprobación del supuesto de independencia a través de la prueba de rachas, este no se cumple, lo que nos indica que la aleatorizacion no se hizo de la mejor manera
 \end{itemize}
 
 \section{Punto 4}
