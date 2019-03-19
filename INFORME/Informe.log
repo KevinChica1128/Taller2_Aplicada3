@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.6.3)  18 MAR 2019 20:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.6.3)  18 MAR 2019 20:56
 entering extended mode
 **./Informe.tex
 (Informe.tex
@@ -354,7 +354,10 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@dimlist=\toks35
 
 ("C:\Users\sotom\AppData\Local\Programs\MiKTeX 2.9\tex\latex\geometry\geometry.
-cfg")) (Informe.aux)
+cfg")) (Informe.aux
+LaTeX Info: Redefining \. on input line 6.
+LaTeX Info: Redefining \% on input line 6.
+)
 \openout1 = `Informe.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 42.
@@ -496,4 +499,105 @@ File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
 
 LaTeX Warning: Characters dropped after `\end{comment}' on input line 132.
+
+[1
+
+{C:/Users/sotom/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+<FigurasUV/D1.pdf, id=17, 1027.84pt x 545.03625pt>
+File: FigurasUV/D1.pdf Graphic file (type pdf)
+<use FigurasUV/D1.pdf>
+Package pdftex.def Info: FigurasUV/D1.pdf  used on input line 192.
+(pdftex.def)             Requested size: 513.91875pt x 272.51746pt.
+ [2 <./FigurasUV/D1.pdf>]
+<FigurasUV/N1.pdf, id=29, 1027.84pt x 545.03625pt>
+File: FigurasUV/N1.pdf Graphic file (type pdf)
+<use FigurasUV/N1.pdf>
+Package pdftex.def Info: FigurasUV/N1.pdf  used on input line 230.
+(pdftex.def)             Requested size: 359.74939pt x 190.76555pt.
+ [3 <./FigurasUV/N1.pdf>]
+<FigurasUV/H1.pdf, id=39, 1027.84pt x 545.03625pt>
+File: FigurasUV/H1.pdf Graphic file (type pdf)
+<use FigurasUV/H1.pdf>
+Package pdftex.def Info: FigurasUV/H1.pdf  used on input line 250.
+(pdftex.def)             Requested size: 359.74939pt x 190.76555pt.
+ [4 <./FigurasUV/H1.pdf>]
+<FigurasUV/P2.png, id=47, 307.1475pt x 146.04562pt>
+File: FigurasUV/P2.png Graphic file (type png)
+<use FigurasUV/P2.png>
+Package pdftex.def Info: FigurasUV/P2.png  used on input line 308.
+(pdftex.def)             Requested size: 153.57336pt x 73.02261pt.
+ [5 <./FigurasUV/P2.png>]
+<FigurasUV/D2.pdf, id=51, 505.89pt x 426.59375pt>
+File: FigurasUV/D2.pdf Graphic file (type pdf)
+<use FigurasUV/D2.pdf>
+Package pdftex.def Info: FigurasUV/D2.pdf  used on input line 347.
+(pdftex.def)             Requested size: 252.94437pt x 213.29634pt.
+ [6 <./FigurasUV/D2.pdf>]
+<FigurasUV/HyQ2.pdf, id=59, 505.89pt x 435.6275pt>
+File: FigurasUV/HyQ2.pdf Graphic file (type pdf)
+<use FigurasUV/HyQ2.pdf>
+Package pdftex.def Info: FigurasUV/HyQ2.pdf  used on input line 385.
+(pdftex.def)             Requested size: 177.06415pt x 152.47191pt.
+ [7 <./FigurasUV/HyQ2.pdf>] [8]
+<FigurasUV/P4.png, id=72, 433.62pt x 165.61874pt>
+File: FigurasUV/P4.png Graphic file (type png)
+<use FigurasUV/P4.png>
+Package pdftex.def Info: FigurasUV/P4.png  used on input line 460.
+(pdftex.def)             Requested size: 216.80946pt x 82.80916pt.
+ [9 <./FigurasUV/P4.png>]
+<FigurasUV/H4.pdf, id=76, 505.89pt x 417.56pt>
+File: FigurasUV/H4.pdf Graphic file (type pdf)
+<use FigurasUV/H4.pdf>
+Package pdftex.def Info: FigurasUV/H4.pdf  used on input line 511.
+(pdftex.def)             Requested size: 252.94437pt x 208.77948pt.
+<FigurasUV/I4.pdf, id=77, 505.89pt x 406.51875pt>
+File: FigurasUV/I4.pdf Graphic file (type pdf)
+<use FigurasUV/I4.pdf>
+Package pdftex.def Info: FigurasUV/I4.pdf  used on input line 517.
+(pdftex.def)             Requested size: 252.94437pt x 203.25887pt.
+ [10 <./FigurasUV/H4.pdf> <./FigurasUV/I4.pdf>]
+<FigurasUV/HyQ4.pdf, id=88, 505.89pt x 470.75874pt>
+File: FigurasUV/HyQ4.pdf Graphic file (type pdf)
+<use FigurasUV/HyQ4.pdf>
+Package pdftex.def Info: FigurasUV/HyQ4.pdf  used on input line 558.
+(pdftex.def)             Requested size: 177.06415pt x 164.76802pt.
+ [11 <./FigurasUV/HyQ4.pdf>] [12]
+No file Informe.bbl.
+[13] (Informe.aux
+LaTeX Info: Redefining \. on input line 6.
+LaTeX Info: Redefining \% on input line 6.
+) ) 
+Here is how much of TeX's memory you used:
+ 5952 strings out of 493305
+ 86523 string characters out of 3129803
+ 167041 words of memory out of 3000000
+ 9358 multiletter control sequences out of 15000+200000
+ 18900 words of font info for 57 fonts, out of 3000000 for 9000
+ 1145 hyphenation exceptions out of 8191
+ 43i,8n,40p,1040b,376s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\sotom\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600
+\ecti0900.pk> <C:\Users\sotom\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen
+\ec\dpi600\ecrm0800.pk> <C:\Users\sotom\AppData\Local\MiKTeX\2.9\fonts\pk\ljfou
+r\jknappen\ec\dpi600\ecrm0600.pk> <C:\Users\sotom\AppData\Local\MiKTeX\2.9\font
+s\pk\ljfour\jknappen\ec\dpi600\ecbx1000.pk> <C:\Users\sotom\AppData\Local\MiKTe
+X\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1000.pk> <C:\Users\sotom\AppData\L
+ocal\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0700.pk> <C:\Users\sotom
+\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\eccc1000.pk> <C:\U
+sers\sotom\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440
+.pk> <C:\Users\sotom\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi60
+0\ecrm0900.pk> <C:\Users\sotom\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappe
+n\ec\dpi600\ecbx0900.pk><C:/Users/sotom/AppData/Local/Programs/MiKTeX 2.9/fonts
+/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/sotom/AppData/Local/Programs/MiK
+TeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/sotom/AppData/Local/
+Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/sotom/Ap
+pData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Use
+rs/sotom/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy1
+0.pfb><C:/Users/sotom/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsf
+onts/cm/cmsy5.pfb><C:/Users/sotom/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
+/public/amsfonts/cm/cmsy7.pfb>
+Output written on Informe.pdf (13 pages, 240022 bytes).
+PDF statistics:
+ 396 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 51 words of extra memory for PDF output out of 10000 (max. 10000000)
 
