@@ -301,8 +301,319 @@ Agente & lsmean &  SE &df& lower.CL& upper.CL& .group\\
 \end{itemize}
 
 \section{Punto 2}
+~\\Un agrónomo realizo un experimento para determinar los efectos combinados de un herbicida y un insecticida en el crecimiento y desarrollo de plantas de algodón (delta de hoja suave):
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale=0.5]{FigurasUV/P2.png}
+\end{figure}
+
+\begin{itemize}
+\item[a.]
+~\\En este caso se podría proponer en principio un diseño factorial pero dado que solo se tiene una replica por cada combinación de los niveles de los factores, osea una replica por tratamiento y lo que en realidad se quiere evaluar es la respuesta del desarrollo de las plantas de algodón ante las distintas dosis de Herbicida, se podría proponer mejor un diseño por bloques donde el Insecticida sea un control.
+
+\item[b.]
+\begin{itemize}
+\item[-]Unidad experimental: Planta de algodón
+\item[-]Factor de tratamiento: Herbicida
+\item[-]Niveles: 0.0,0.5,1.0,1.5 y 2.0.
+\item[-]Factor de control:Insecticida.
+\item[-]Niveles: 0,20,40,60 y 80.
+\item[-]Tratamientos: 0.0,0.5,1.0,1.5 y 2.0.
+\item[-]Variable de respuesta: Crecimiento de las plantas de algodón.
+\end{itemize}
+
+\item[c.]
+~\\\textbf{Estadísticas descriptivas:}
+~\\Como acordamos que el mejor es un DBCA entonces nos interesa al final conocer el efecto del Herbicida sobre el crecimiento de la planta de algodón y no el Insecticida(bloques o control), así pues hacemos descriptivas respecto a el Herbicida:
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+\hline 
+ Herbicida & Mín & Q1 & Mediana & Media & Q3 & Máx & Des. Estándar & CV(\%)  \\ 
+\hline 
+0 &	57.5&	65.8&	68.0&	79.22&	82.8&	122&	28.89933&	79.22 \\
+0.5&60.8&	68.8&	70.0&	71.38&	72.5&	84.8&	7.769788&	10.8851 \\
+1&	52&	63.0&	68.8&	66.96&	71.5&	79.5&	9.173135&	13.69942\\
+1.5&36.3&	65.8&69.3& 65.84&	77.3&	80.5&	15.68969&	23.83003\\
+2&	29.3&	68.3&	72.0&	65.08&	73.3&	82.5&	18.49047&	28.41191\\
+
+\hline 
+\end{tabular} 
+\end{center}
+~\\Podemos observar primero que los coeficientes de variación son relativamente altos lo que indica en principio que tal vez el control local no fue muy bueno, observamos ademas que los promedios para cada tratamiento están muy cercanos entre si lo que indicaría que pueden haber tratamientos con igual efecto.
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale=0.5]{FigurasUV/D2.pdf}
+\end{figure}
+~\\En la gráfica podemos apreciar que cada tratamiento parece comportarse de manera similar, teniendo como notamos anteriormente promedios muy similares, podemos ver que la variabilidad es relativamente alta y que los tratamientos 0.5 y 1.5 parecen ser los que presentan menor variabilidad.
+
+\item[d.]
+~\\Se plantea el siguiente modelo:
+\begin{center}
+$y_{ij}=\mu+\tau_i+\beta_j+\varepsilon_{ij}$ \;\;\; $i=1,...,3$ \;\;\; $j=1,...,7$
+\end{center}
+~\\El cuál se construye bajo los siguientes supuestos:
+\begin{center}
+$\varepsilon_{ij}\approx N(0,\sigma^2),\;\; E[\varepsilon_{ij}]=0 \;\;\; \forall_{ij}, \;\; V[\varepsilon_{ij}]=\sigma^2, \;\; cov[\varepsilon_{ij},\varepsilon_{i'j'}]=0$
+\end{center}
+~\\Donde:
+~\\$y_{ij}=$Crecimiento de la planta de algodón j-esima con el herbicida i-esimo.
+~\\$\mu=$Media general del crecimiento de la planta de algodón  sin tener en cuenta el herbicida ni el tipo de insecticida(control).
+~\\$\tau_i=$Efecto del i-ésimo Herbicida sobre el crecimiento de la planta de algodón.
+~\\$\beta_j=$Efecto del j-ésimo Insecticida sobre el crecimiento de la planta.
+~\\$\varepsilon_{ij}=$Error aleatorio debido al i-ésimo Herbicida y a el j-ésimo Insecticida.
+
+\item[e.]
+~\\Dado que no nos interesan los bloques(Insecticida), ya que decidimos usarlos como control. Nos centraremos en los efectos de los tratamientos o Herbicidas. Por lo que se plantea la siguiente hipótesis:
+\begin{center}
+~\\$H_0:\tau_1=\tau_2=...=\tau_5=\tau$
+~\\$H_1:$Al menos una de las igualdades no se cumple.
+\end{center}
+\item[f.]
+~\\Antes de realizar la ANOVA e interpretar los resultados, se comprobarán los supuestos del modelo para saber si las interpretaciones que obtengamos si van a ser correctas.
+~\\Sobre los errrores se tienen los siguientes supuestos:
+$$\varepsilon_{ij}\approx N(0,\sigma^2)  \rightarrow \;\; Normalidad$$
+$$ E[\varepsilon_{ij}]=0 \;\;\; \forall_{ij} \rightarrow \;\; Correcta\; especificacion$$
+$$V[\varepsilon_{ij}]=\sigma^2 \;\;\; \forall_{ij}\rightarrow \;\; Homocedasticidad$$ 
+$$cov[\varepsilon_{ij},\varepsilon_{i'j'}]=0 \;\;\; \forall_{i\neq i'}  \;\; \wedge \;\;\; \forall_{j\neq j'} \rightarrow \;\; Independencia$$
+
+\begin{itemize}
+\item[-]Normalidad: Para probar el supuesto de normalidad, se realizarán dos pruebas gráficas (histograma y QQ-plot) y una prueba estadística(Shapiro Wilk).
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale=0.35]{FigurasUV/HyQ2.pdf}
+\end{figure}
+~\\En estas gráficas no se observa un incumplimiento claro de este supuesto, ya que en el QQplot se observa que los puntos no se salen de los intervalos de confianza de la recta de cuantiles teórica de la distribución normal y en el histograma no se ve un comportamiento muy diferente a una distribución normal. Sin embargo, las pruebas gráficas no son muy convincentes  Por ello se acude a la prueba formal.
+ 
+\item[*]Test Shapiro-Wilk:$$H_0:Los\; datos\; provienen\; de\; una\; distribucion\; normal$$
+$$H_a:Los\; datos\; no\; provienen\; de\; una\; distribucion\; normal$$
+$$W = 0.90519, p-value = 0.02385$$
+
+~\\Como el p-valor=0.02385 es inferior a nuestro nivel de significancia $\alpha=0.05$,  se rechaza la hipótesis nula, y concluimos que  hay evidencia estadística suficiente para decir que los datos no provienen de una distribución normal, lo que nos indica que este supuesto de normalidad en los errores  se incumple.
+\item[-]Correcta Especificación:Sabemos que este supuesto siempre se cumple, ya que el método o la construcción del modelo asegura que la esperanza de los residuales sea igual a cero, sin embargo, se realizó una prueba t para comprobarlo.
+
+\item[*]T-test:$$H_0: La\; verdadera\; media\; es\; igual\; a\; 0 $$
+$$H_a:La\; verdadera\; media\; no\; es\; igual\; a\; 0$$
+$$t = 6.8721e-17, df = 47, p-value = 1$$
+~\\Como el p-valor=1 es superior a nuestro nivel de significancia $\alpha=0.05$, no se rechaza la hipótesis nula, y se verifica lo dicho anteriormente. 
+
+
+\item[-]Homocedasticidad:Para analizar la homocedasticidad se realizó una prueba estadística Test de Levene ya que la prueba de Barlett es sensible a las desviaciones de la normalidad y como tenemos que nuestros errores no cumplen el supuesto de normalidad esta prueba (Prueba de Barlett) serviría únicamente para probar normalidad.
+
+\item[*]Prueba de Levene:$$H_0:Las\;varianzas\;de\;todos\;los\;grupos\;son\;iguales$$
+$$H_a:Al\;menos\;una\;de las\; varianzas\;es\;diferente$$
+$$F \; Value = 0.5558, df = 4, p-value =  0.6972$$
+
+~\\Como el p-valor= 0.6972 es superior a nuestro nivel de significancia $\alpha=0.05$, no se rechaza la hipótesis nula, y concluimos que no hay evidencia estadística suficiente para decir que al menos entre dos grupos la varianza es diferente, lo que nos indica que este supuesto de homocedasticidad en los errores no se incumple.
+
+
+\item[-]Independencia:Para probar el supuesto de independencia en los errores, no se debe realizar un correlograma o una prueba sobre la autocorrelación(prueba de Durbin-Watson) ya que estas dependen del orden en el cuál se obtuvieron los datos, y esa información no se tiene, por lo tanto, solo se realizará una prueba de rachas.
+
+\item[*]Test de rachas: $$H_0:La \; muestra\; es\; aleatoria\; (las \; observaciones \;son \; independientes)$$
+$$H_a:La \; muestra\; no \;es\; aleatoria\; (las \; observaciones \; no\;son \; independientes)$$
+$$Standard \; Normal = -0.19646, p-value = 0.8443$$
+~\\Como el p valor=0.8443 es mayor que nuestro nivel de significancia $\alpha=0.05$, no rechazamos la hipótesis nula y concluimos que no hay evidencia estadística suficiente para decir que los residuales no están distribuidos de manera aleatoria, en otras palabras, no podemos decir que no son independientes. Teniendo en cuenta esto, podemos decir que este supuesto de independencia en los errores parece no incumplirse.
+\end{itemize}
+~\\Ya que según las pruebas aplicadas, se incumple el supuesto de normalidad no podemos hacer una ANOVA porque los resultados podrían ser erróneos,por esto procedemos a realizar una prueba no parametrica (Prueba de Friedman)
+
+$$H_0:\tau_1=\tau_2=...=\tau_5=\tau$$
+$$H_1:Al\; menos\; una\; de\; las \;igualdades\; no\; se \;cumple.$$
+$$Friedman\; chi-squared = 1.3333, df = 4, p-value =  0.8557$$
+
+~\\Como el p valor=0.8557 es mayor que nuestro nivel de significancia $\alpha=0.05$, no rechazamos la hipótesis nula y concluimos que no hay evidencia estadística suficiente para decir que los diferentes 
+Herbicidas presentan efectos distintos sobre el crecimiento de la planta de algodón.
+
+\item[h.]como pudimos observar no se cumplía el supuesto de Normalidad de los errores y viéndolo como un diseño por bloques el test de Friedman arrojo que no había diferencias significativas entre los tratamientos, por ende podemos concluir que independientemente de el herbicida que se utilice se  va a obtener el mismo crecimiento en las plantas de algodón por lo que en este caso seria una buena opción optar por el que resulte mas económico.
+
+\end{itemize}
+
 \section{Punto 3}
 \section{Punto 4}
+~\\Dos tipos de moluscos A y B fueron sometidos a tres concentraciones distintas de agua de mar (100, 75 y 50 ) y se observó el consumo de oxígeno midiendo la proporción de O2 por unidad de peso seco del molusco.
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale=0.5]{FigurasUV/P4.png}
+\end{figure}
+
+\begin{itemize}
+\item[a.]
+~\\En este caso es adecuado un diseño factorial ya que se quiere evaluar el efecto que tiene la concentración de agua de mar sobre el consumo de oxigeno de 2 tipos de Molusco, por ende se debe tener en cuenta las interacciones entre los moluscos y las diferentes concentraciones de agua de mar.
+
+\item[b.]
+\begin{itemize}
+\item[-]Unidad experimental: Molusco
+\item[-]Factor de tratamiento: Concentración de agua de mar y Tipo de molusco
+\item[-]Niveles: $100$,$75$,$50$ y A, B.
+\item[-]Tratamientos: $A*100$, $B*100$,$A*75$,$B*75$,$A*50$,$B*50$.
+\item[-]Variable de respuesta: Proporción de O2 por unidad de peso seco del molusco.
+\end{itemize}
+
+
+\item[c.]
+~\\\textbf{Estadísticas descriptivas:}
+~\\se obtienen descriptivas tanto para la concentración de agua de mar como para cada uno de los tipos de moluscos respecto a el proporción de O2:
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+\hline 
+  Concentración& Mín & Q1 & Mediana & Media & Q3 & Máx & Des. Estándar & CV(\%)  \\ 
+\hline 
+$100$ &	3.68&	6.140&	8.595&8.67125&	10.575&	14&	2.905647&	33.50898 \\
+$75$&	1.8&	5.2&	6.43&	6.9925&	8.7675 &13.2&	2.715052&	38.82806 \\
+$50$&6.38&10.085&11.455&12.25062&14.500&18.8&3.098041&	25.28884\\
+
+\hline 
+\end{tabular} 
+\end{center}
+~\\En la tabla anterior, vemos que la concentración de agua de mar tiene un coeficiente de variación grande en varios de los tratamientos lo que indica que el porcentaje de O2 varia mucho en las diferentes concentraciones. El mayor promedio de porcentaje de O2 es el que tiene una concentración de 50 porciento de agua de mar.
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+\hline 
+  Tipo& Mín & Q1 & Mediana & Media & Q3 & Máx & Des. Estándar & CV(\%)  \\ 
+\hline 
+A &	5.2&7.18&9.74&9.846&11.11&18.8&	3.225164&	32.75608 \\
+B&	1.8&5.685&	8.060&	8.609167&	10.700 &17.7&	3.918164&	45.51153 \\
+
+
+\hline 
+\end{tabular} 
+\end{center}
+
+~\\ En este caso observamos que los promedios de porcentaje de O2 son muy similares lo que indica en principio que el Tipo de molusco no tiene un efecto significativo sobre el O2, o lo que es lo mismo que da igual si el molusco es A o B el porcentaje de O2 va a ser el mismo.
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale=0.5]{FigurasUV/H4.pdf}
+\end{figure}
+~\\Para evaluar la interacciones entre los diferentes niveles de los factores utilizamos un boxplot. Podemos observar como la variabilidad en los distintos tratamientos es parecida pero sus medias toman diferentes valores donde la que mayor porcentaje de O2 tiene es la del tratamiento $50*B$ que es en la que se tiene un molusco de tipo B con un porcentaje de agua de mar del 50, esto en principio podría indicar que tal vez este sea el tratamiento que presenta un mejor efecto, aun así si compramos los tratamientos $50*A$ y $50.B$ son las que presentan mejor porcentaje de O2 por lo que también se podría inferir a priori que la concentración 50 porciento de agua de mar es la mas significativa.
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale=0.5]{FigurasUV/I4.pdf}
+\end{figure}
+
+~\\En este gráfico podemos observar a priori que tal vez exista una interacción entre el porcentaje de agua de mar y el tipo de molusco donde el mayor porcentaje de O2 en el gua se observa cuando se tiene una concentración de agua de mar del 50, sin embargo los gráficos no suelen ser muy confiables porque depende de la experiencia que tenga quien los observa, por ende esperaremos a tener la prueba ANOVA.
+
+\item[d.]
+~\\Se plantea el siguiente modelo:
+\begin{center}
+$y_{ijk}=\mu+\alpha_i+\beta_j+\alpha_i*\beta_j+\varepsilon_{ijk}$ \;\;\; $i=1,2,3$ \;\;\; $j=1,2$\;\;\; $k=1,...,8$
+\end{center}
+~\\El cuál se construye bajo los siguientes supuestos:
+\begin{center}
+$\varepsilon_{ij}\approx N(0,\sigma^2),\;\; E[\varepsilon_{ij}]=0 \;\;\; \forall_{ij}, \;\; V[\varepsilon_{ij}]=\sigma^2, \;\; cov[\varepsilon_{ij},\varepsilon_{i'j'}]=0$
+\end{center}
+~\\Donde:
+~\\$y_{ijk}=$Porcentaje k-esimo de O2 en el agua el cual tiene un porcentaje  i-esimo de agua de mar y un tipo de molusco j .
+~\\$\mu=$Media general de porcentaje de O2  sin tener en cuenta la concentración de agua de mar ni el tipo de molusco.
+~\\$\alpha_i=$Efecto del i-ésimo porcentaje de concentración sobre el porcentaje de O2(consumo).
+~\\$\beta_j=$Efecto del j-ésimo tipo de molusco sobre el porcentaje de O2(consumo).
+~\\$\alpha_i*\beta_j=$Efecto de la interacción entre la concentración y el tipo de molusco sobre el porcentaje de O2(consumo)
+~\\$\varepsilon_{ij}=$Error aleatorio debido al i-ésimo proncetaje de concentracion y a el j-ésimo tipo de molusco.
+
+\item[e.]
+~\\Principalmente nos interesa la interacción entre el porcentaje de agua de mar y el tipo de molusco. Por lo que se plantea la siguiente hipótesis:
+\begin{center}
+~\\$H_0:(\alpha*\beta)_{11}=(\alpha*\beta)_{12}=...=(\alpha*\beta)_{32}$
+~\\$H_1:$Al menos una de las igualdades no se cumple.
+\end{center}
+
+\item[f.]
+~\\Antes de realizar la ANOVA e interpretar los resultados, se comprobarán los supuestos del modelo esto para concer si el metodo a utilizar es correcto.
+~\\Sobre los errores se tienen los siguientes supuestos:
+$$\varepsilon_{ij}\approx N(0,\sigma^2)  \rightarrow \;\; Normalidad$$
+$$ E[\varepsilon_{ij}]=0 \;\;\; \forall_{ij} \rightarrow \;\; Correcta\; especificacion$$
+$$V[\varepsilon_{ij}]=\sigma^2 \;\;\; \forall_{ij}\rightarrow \;\; Homocedasticidad$$ 
+$$cov[\varepsilon_{ij},\varepsilon_{i'j'}]=0 \;\;\; \forall_{i\neq i'}  \;\; \wedge \;\;\; \forall_{j\neq j'} \rightarrow \;\; Independencia$$
+
+\begin{itemize}
+\item[-]Normalidad: Para probar el supuesto de normalidad, se realizarán dos pruebas gráficas (histograma y QQ-plot) y una prueba estadística(Shapiro Wilk).
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale=0.35]{FigurasUV/HyQ4.pdf}
+\end{figure}
+~\\Podemos observar en la grafica que este supuesto se cumple claramente, observamos como el QQ-plot se apega muy bien a la recta y el histograma sigue muy de cerca la curva de una distribución normal, sin embargo se hace un prueba formal ya que las pruebas gráficas no son tan confiables.
+ 
+\item[*]Test Shapiro-Wilk:$$H_0:Los\; datos\; provienen\; de\; una\; distribucion\; normal$$
+$$H_a:Los\; datos\; no\; provienen\; de\; una\; distribucion\; normal$$
+$$W = 0.95824, p-value = 0.08571$$
+
+~\\Como el p-valor=0.08571 es muy superior a nuestro nivel de significancia $\alpha=0.05$, no se rechaza la hipótesis nula, y concluimos que no hay evidencia estadística suficiente para decir que los datos no provienen de una distribución normal, lo que nos indica que este supuesto de normalidad en los errores no se incumple.
+\item[-]Correcta Especificación:Sabemos que este supuesto siempre se cumple, ya que el método o la construcción del modelo asegura que la esperanza de los residuales sea igual a cero, sin embargo, se realizó una prueba t para comprobarlo.
+
+\item[*]T-test:$$H_0: La\; verdadera\; media\; es\; igual\; a\; 0 $$
+$$H_a:La\; verdadera\; media\; no\; es\; igual\; a\; 0$$
+$$t = 6.8721e-17, df = 47, p-value = 1$$
+~\\Como el p-valor=1 es superior a nuestro nivel de significancia $\alpha=0.05$, no se rechaza la hipótesis nula, y se verifica lo dicho anteriormente. 
+
+
+\item[-]Homocedasticidad:Para analizar la homocedasticidad se realizó una prueba estadística (Test de Barlett)
+
+\item[*]Prueba de Barlett:$$H_0:Las\;varianzas\;de\;todos\;los\;grupos\;son\;iguales$$
+$$H_a:Al\;menos\;una\;de las\; varianzas\;es\;diferente$$
+$$Bartlett's \; K-squared = 0.71218, df = 5, p-value = 0.9823$$
+
+~\\Como el p-valor=0.9823 es superior a nuestro nivel de significancia $\alpha=0.05$, no se rechaza la hipótesis nula, y concluimos que no hay evidencia estadística suficiente para decir que al menos entre dos grupos la varianza es diferente, lo que nos indica que este supuesto de homocedasticidad en los errores no se incumple.
+
+
+\item[-]Independencia:Para probar el supuesto de independencia en los errores, no se debe realizar un correlograma o una prueba sobre la autocorrelación(prueba de Durbin-Watson) ya que estas dependen del orden en el cuál se obtuvieron los datos, y esa información no se tiene, por lo tanto, solo se realizará una prueba de rachas.
+
+\item[*]Test de rachas: $$H_0:La \; muestra\; es\; aleatoria\; (las \; observaciones \;son \; independientes)$$
+$$H_a:La \; muestra\; no \;es\; aleatoria\; (las \; observaciones \; no\;son \; independientes)$$
+$$Standard \; Normal = -0.77925, p-value = 0.4358$$
+~\\Como el p valor=0.4358 es mayor que nuestro nivel de significancia $\alpha=0.05$, no rechazamos la hipótesis nula y concluimos que no hay evidencia estadística suficiente para decir que los residuales no están distribuidos de manera aleatoria, en otras palabras, no podemos decir que no son independientes. Teniendo en cuenta esto, podemos decir que este supuesto de independencia en los errores parece no incumplirse.
+\end{itemize}
+~\\Ya que según las pruebas aplicadas, ninguno de los supuestos se incumple, procedemos a realizar e interpretar la ANOVA:
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+ &Df&  Sum Sq& Mean Sq &F value & Pr(>F)\\   
+\hline 
+Concentracion  &     2&  230.82 &  115.408&   13.1712& 3.629e-05 ***\\ 
+Tipo  &     1& 23.23 &  23.227&   2.6508 & 0.1110\\
+Concentracion*Tipo  &     2&  15.36 &  7.678&   0.8763& 0.4238\\
+Residuals &   42&  368.01&   8.762&    & \\
+\hline 
+\end{tabular} 
+\end{center} 
+  
+~\\Podemos ver que la interacción entre los factores no es representativa, esto quiere decir que en conjunto la concentración de agua de mar con el tipo de molusco no tiene un efecto significativo sobre el porcentaje de O2 en el agua y se deberán analizar los factores por separado. 
+
+\item[g.]Se realizará la prueba postanova de comparaciones múltiples  para cada uno de los factores por separados ya que la interaccion es no representativa:
+
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+Agente & lsmean &  SE &df& lower.CL& upper.CL& .group\\
+\hline
+ 75  &  6.99& 0.74 &42 &    5.50  &   8.49 & a \\    
+ 100 &  8.67& 0.74 &42 &    7.18  &  10.16 & a  \\   
+ 50 &  12.25& 0.74 &42  &  10.76  &  13.74 &  b  \\ 
+\hline
+\end{tabular}
+\end{center}
+
+~\\Podemos ver que en las comparaciones para la concentración si se aprecian diferencias significativas, en este caso  entre el tratamiento del porcentaje 50 con el resto.
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+Agente & lsmean &  SE &df& lower.CL& upper.CL& .group\\
+\hline
+ B   &   8.61& 0.604& 42 &    7.39 &    9.83 & a \\    
+ A   &  10.00& 0.604& 42 &    8.78&    11.22 & a  \\    
+\hline
+\end{tabular}
+\end{center}
+
+~\\Para las comparaciones de el tipo de molusco notamos que no hay diferencias y independientemente del tipo de molusco el porcentaje de O2 va a ser el mismo.
+
+\item[h.]Primero notamos que la interacción es no significativa por lo que podemos decir que en conjunto el tipo de molusco y la concentración de agua de mar no tienen ningún efecto sobre el porcentaje de O2, sin embargo viéndolo por separado la concentración si presenta un efecto significativo, siendo la concentración 50 de agua de mar la que mayor porcentaje de O2 presenta, asi sin importar cual sea el tipo de molusco la concentración de agua de mar en el cual se desarrolla es la que influye en el consumo de oxigeno.
+\end{itemize}
+
 % //// --------------------------------------------------------------------------------
 % -------------------------------------------------------------------------------------
 % Fin del cuerpo del documento

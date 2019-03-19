@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.6960 64-bit) (preloaded format=pdflatex 2019.2.2)  15 MAR 2019 22:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6930 64-bit) (preloaded format=pdflatex 2019.1.24)  18 MAR 2019 20:14
 entering extended mode
 **./Informe.tex
 (Informe.tex
@@ -7,31 +7,40 @@ LaTeX2e <2018-12-01>
 Document Class: revcoles 2009/04/22 v2.5 document class for multi authored arti
 cle for REVCOLES journal, Symposium of statistic, projects of pregrade in stati
 stic, and report in a course at the National University of Colombia
-("C:\Program Files\MiKTeX 2.9\tex/latex/base\fontenc.sty"
+
+("C:\Users\Alejandro\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\fontenc.s
+ty"
 Package: fontenc 2018/08/11 v2.0j Standard LaTeX package
 
-("C:\Program Files\MiKTeX 2.9\tex/latex/base\t1enc.def"
+("C:\Users\Alejandro\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\t1enc.def
+"
 File: t1enc.def 2018/08/11 v2.0j Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
 ))
-("C:\Program Files\MiKTeX 2.9\tex/latex/amsmath\amsmath.sty"
+("C:\Users\Alejandro\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsmat
+h.sty"
 Package: amsmath 2018/12/01 v2.17b AMS math features
 \@mathmargin=\skip41
 
 For additional information on amsmath, use the `?' option.
-("C:\Program Files\MiKTeX 2.9\tex/latex/amsmath\amstext.sty"
+
+("C:\Users\Alejandro\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amstex
+t.sty"
 Package: amstext 2000/06/29 v2.01 AMS text
 
-("C:\Program Files\MiKTeX 2.9\tex/latex/amsmath\amsgen.sty"
+("C:\Users\Alejandro\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsgen
+.sty"
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks14
 \ex@=\dimen102
 ))
-("C:\Program Files\MiKTeX 2.9\tex/latex/amsmath\amsbsy.sty"
+("C:\Users\Alejandro\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsbsy
+.sty"
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen103
 )
-("C:\Program Files\MiKTeX 2.9\tex/latex/amsmath\amsopn.sty"
+("C:\Users\Alejandro\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsopn
+.sty"
 Package: amsopn 2016/03/08 v2.02 operator names
 )
 \inf@bad=\count80
@@ -72,7 +81,8 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 730.
 LaTeX Info: Redefining \[ on input line 2844.
 LaTeX Info: Redefining \] on input line 2845.
 )
-("C:\Program Files\MiKTeX 2.9\tex/latex/amscls\amsthm.sty"
+("C:\Users\Alejandro\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amscls\amsthm.
+sty"
 Package: amsthm 2017/10/31 v2.20.4
 \thm@style=\toks19
 \thm@bodyfont=\toks20
@@ -84,34 +94,40 @@ Package: amsthm 2017/10/31 v2.20.4
 \thm@headsep=\skip46
 \dth@everypar=\toks24
 )
-("C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\amssymb.sty"
+("C:\Users\Alejandro\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\amssy
+mb.sty"
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 
-("C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\amsfonts.sty"
+("C:\Users\Alejandro\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\amsfo
+nts.sty"
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
-("C:\Program Files\MiKTeX 2.9\tex/latex/base\latexsym.sty"
+("C:\Users\Alejandro\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\latexsym.
+sty"
 Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
 \symlasy=\mathgroup6
 LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
 (Font)                  U/lasy/m/n --> U/lasy/b/n on input line 52.
 )
-("C:\Program Files\MiKTeX 2.9\tex/latex/tools\verbatim.sty"
+("C:\Users\Alejandro\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\verbatim
+.sty"
 Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
 \every@verbatim=\toks25
 \verbatim@line=\toks26
 \verbatim@in@stream=\read1
 )
-("C:\Program Files\MiKTeX 2.9\tex/latex/tools\enumerate.sty"
+("C:\Users\Alejandro\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\enumerat
+e.sty"
 Package: enumerate 2015/07/23 v3.00 enumerate extensions (DPC)
 \@enLab=\toks27
 )
-("C:\Program Files\MiKTeX 2.9\tex/latex/tools\array.sty"
-Package: array 2018/12/30 v2.4k Tabular extension package (FMi)
+("C:\Users\Alejandro\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\array.st
+y"
+Package: array 2018/11/13 v2.4j Tabular extension package (FMi)
 \col@sep=\dimen111
 \ar@mcellbox=\box29
 \extrarowheight=\dimen112
@@ -120,8 +136,9 @@ Package: array 2018/12/30 v2.4k Tabular extension package (FMi)
 \backup@length=\skip48
 \ar@cellbox=\box30
 )
-("C:\Program Files\MiKTeX 2.9\tex/latex/tools\multicol.sty"
-Package: multicol 2018/12/27 v1.8v multicolumn formatting (FMi)
+("C:\Users\Alejandro\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\multicol
+.sty"
+Package: multicol 2018/11/09 v1.8u multicolumn formatting (FMi)
 \c@tracingmulticols=\count92
 \mult@box=\box31
 \multicol@leftmargin=\dimen113
@@ -169,37 +186,46 @@ Package: multicol 2018/12/27 v1.8v multicolumn formatting (FMi)
 \colbreak@box=\box56
 \mc@col@check@num=\count100
 )
-("C:\Program Files\MiKTeX 2.9\tex/generic/oberdiek\ifpdf.sty"
+("C:\Users\Alejandro\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\ifp
+df.sty"
 Package: ifpdf 2018/09/07 v3.3 Provides the ifpdf switch
 )
-("C:\Program Files\MiKTeX 2.9\tex/latex/graphics\graphicx.sty"
+("C:\Users\Alejandro\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\graph
+icx.sty"
 Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
 
-("C:\Program Files\MiKTeX 2.9\tex/latex/graphics\keyval.sty"
+("C:\Users\Alejandro\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\keyva
+l.sty"
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks29
 )
-("C:\Program Files\MiKTeX 2.9\tex/latex/graphics\graphics.sty"
+("C:\Users\Alejandro\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\graph
+ics.sty"
 Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
 
-("C:\Program Files\MiKTeX 2.9\tex/latex/graphics\trig.sty"
+("C:\Users\Alejandro\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\trig.
+sty"
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 )
-("C:\Program Files\MiKTeX 2.9\tex/latex/graphics-cfg\graphics.cfg"
+("C:\Users\Alejandro\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-cfg\g
+raphics.cfg"
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 99.
 
-("C:\Program Files\MiKTeX 2.9\tex/latex/graphics-def\pdftex.def"
+("C:\Users\Alejandro\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-def\p
+dftex.def"
 File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen122
 \Gin@req@width=\dimen123
 )
-("C:\Program Files\MiKTeX 2.9\tex/latex/graphics\color.sty"
+("C:\Users\Alejandro\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\color
+.sty"
 Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
 
-("C:\Program Files\MiKTeX 2.9\tex/latex/graphics-cfg\color.cfg"
+("C:\Users\Alejandro\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-cfg\c
+olor.cfg"
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package color Info: Driver file: pdftex.def on input line 147.
@@ -224,31 +250,39 @@ Package color Info: Driver file: pdftex.def on input line 147.
 \c@obse=\count118
 \c@cond=\count119
 
-("C:\Program Files\MiKTeX 2.9\tex/latex/base\size10.clo"
+("C:\Users\Alejandro\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\size10.cl
+o"
 File: size10.clo 2018/09/03 v1.4i Standard LaTeX file (size option)
 )
-("C:\Program Files\MiKTeX 2.9\tex/generic/babel\babel.sty"
+("C:\Users\Alejandro\AppData\Local\Programs\MiKTeX 2.9\tex/generic/babel\babel.
+sty"
 Package: babel 2018/11/13 3.27 The Babel package
 
-("C:\Program Files\MiKTeX 2.9\tex/generic/babel\switch.def"
+("C:\Users\Alejandro\AppData\Local\Programs\MiKTeX 2.9\tex/generic/babel\switch
+.def"
 File: switch.def 2018/11/13 3.27 Babel switching mechanism
 )
 *************************************
 * Local config file bblopts.cfg used
 *
-(C:\Users\KEVINSTEVEN\AppData\Roaming\MiKTeX\2.9\tex/latex/arabi\bblopts.cfg
+
+("C:\Users\Alejandro\AppData\Local\Programs\MiKTeX 2.9\tex/latex/arabi\bblopts.
+cfg"
 File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
  babel
 )
-("C:\Program Files\MiKTeX 2.9\tex/latex/babel-spanish\spanish.ldf"
+("C:\Users\Alejandro\AppData\Local\Programs\MiKTeX 2.9\tex/latex/babel-spanish\
+spanish.ldf"
 Language: spanish.ldf 2016/03/03 v5.0p Spanish support from the babel system
 
-("C:\Program Files\MiKTeX 2.9\tex/generic/babel\babel.def"
+("C:\Users\Alejandro\AppData\Local\Programs\MiKTeX 2.9\tex/generic/babel\babel.
+def"
 File: babel.def 2018/11/13 3.27 Babel common definitions
 \babel@savecnt=\count120
 \U@D=\dimen124
 
-("C:\Program Files\MiKTeX 2.9\tex/generic/babel\txtbabel.def")
+("C:\Users\Alejandro\AppData\Local\Programs\MiKTeX 2.9\tex/generic/babel\txtbab
+el.def")
 \bbl@dirlevel=\count121
 )
 \es@quottoks=\toks30
@@ -269,10 +303,12 @@ Package babel Info: Making > an active character on input line 707.
 \belowcaptionskip=\skip52
 \bibindent=\dimen125
 
-(C:\Users\KEVINSTEVEN\AppData\Roaming\MiKTeX\2.9\tex/latex/caption\caption.sty
+("C:\Users\Alejandro\AppData\Local\Programs\MiKTeX 2.9\tex/latex/caption\captio
+n.sty"
 Package: caption 2018/10/06 v3.3-154 Customizing captions (AR)
 
-(C:\Users\KEVINSTEVEN\AppData\Roaming\MiKTeX\2.9\tex/latex/caption\caption3.sty
+("C:\Users\Alejandro\AppData\Local\Programs\MiKTeX 2.9\tex/latex/caption\captio
+n3.sty"
 Package: caption3 2018/09/12 v1.8c caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 64.
 \captionmargin=\dimen126
@@ -285,13 +321,17 @@ Package caption3 Info: TeX engine: e-TeX on input line 64.
 )
 \c@caption@flags=\count130
 \c@ContinuedFloat=\count131
-) ("C:\Program Files\MiKTeX 2.9\tex/latex/harvard\harvard.sty"
+)
+("C:\Users\Alejandro\AppData\Local\Programs\MiKTeX 2.9\tex/latex/harvard\harvar
+d.sty"
 Package: harvard 
 
-("C:\Program Files\MiKTeX 2.9\tex/latex/base\ifthen.sty"
+("C:\Users\Alejandro\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\ifthen.st
+y"
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )))
-("C:\Program Files\MiKTeX 2.9\tex/latex/float\float.sty"
+("C:\Users\Alejandro\AppData\Local\Programs\MiKTeX 2.9\tex/latex/float\float.st
+y"
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count132
 \float@exts=\toks31
@@ -299,22 +339,27 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks32
 \@floatcapt=\box58
 )
-("C:\Program Files\MiKTeX 2.9\tex/latex/base\inputenc.sty"
+("C:\Users\Alejandro\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\inputenc.
+sty"
 Package: inputenc 2018/08/11 v1.3c Input encoding file
 \inpenc@prehook=\toks33
 \inpenc@posthook=\toks34
 
-("C:\Program Files\MiKTeX 2.9\tex/latex/base\latin1.def"
+("C:\Users\Alejandro\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\latin1.de
+f"
 File: latin1.def 2018/08/11 v1.3c Input encoding file
 ))
-("C:\Program Files\MiKTeX 2.9\tex/latex/geometry\geometry.sty"
+("C:\Users\Alejandro\AppData\Local\Programs\MiKTeX 2.9\tex/latex/geometry\geome
+try.sty"
 Package: geometry 2018/04/16 v5.8 Page Geometry
 
-("C:\Program Files\MiKTeX 2.9\tex/generic/oberdiek\ifvtex.sty"
+("C:\Users\Alejandro\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\ifv
+tex.sty"
 Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
 Package ifvtex Info: VTeX not detected.
 )
-("C:\Program Files\MiKTeX 2.9\tex/generic/ifxetex\ifxetex.sty"
+("C:\Users\Alejandro\AppData\Local\Programs\MiKTeX 2.9\tex/generic/ifxetex\ifxe
+tex.sty"
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
 \Gm@cnth=\count133
@@ -330,7 +375,8 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@layoutvoffset=\dimen140
 \Gm@dimlist=\toks35
 
-("C:\Program Files\MiKTeX 2.9\tex/latex/geometry\geometry.cfg")) (Informe.aux
+("C:\Users\Alejandro\AppData\Local\Programs\MiKTeX 2.9\tex/latex/geometry\geome
+try.cfg")) (Informe.aux
 LaTeX Info: Redefining \. on input line 6.
 LaTeX Info: Redefining \% on input line 6.
 )
@@ -349,7 +395,8 @@ LaTeX Font Info:    ... okay on input line 42.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 42.
 LaTeX Font Info:    ... okay on input line 42.
 
-(C:\Users\KEVINSTEVEN\AppData\Roaming\MiKTeX\2.9\tex/context/base\supp-pdf.mkii
+("C:\Users\Alejandro\AppData\Local\Programs\MiKTeX 2.9\tex/context/base\supp-pd
+f.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count136
 \scratchdimen=\dimen141
@@ -362,35 +409,46 @@ LaTeX Font Info:    ... okay on input line 42.
 \MPnumerator=\count140
 \makeMPintoPDFobject=\count141
 \everyMPtoPDFconversion=\toks37
-) ("C:\Program Files\MiKTeX 2.9\tex/latex/oberdiek\epstopdf-base.sty"
+)
+("C:\Users\Alejandro\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\epsto
+pdf-base.sty"
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
-("C:\Program Files\MiKTeX 2.9\tex/generic/oberdiek\infwarerr.sty"
+("C:\Users\Alejandro\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\inf
+warerr.sty"
 Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
 )
-("C:\Program Files\MiKTeX 2.9\tex/latex/oberdiek\grfext.sty"
+("C:\Users\Alejandro\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\grfex
+t.sty"
 Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
 
-("C:\Program Files\MiKTeX 2.9\tex/generic/oberdiek\kvdefinekeys.sty"
+("C:\Users\Alejandro\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\kvd
+efinekeys.sty"
 Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
 
-("C:\Program Files\MiKTeX 2.9\tex/generic/oberdiek\ltxcmds.sty"
+("C:\Users\Alejandro\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\ltx
+cmds.sty"
 Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
 )))
-("C:\Program Files\MiKTeX 2.9\tex/latex/oberdiek\kvoptions.sty"
+("C:\Users\Alejandro\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\kvopt
+ions.sty"
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 
-("C:\Program Files\MiKTeX 2.9\tex/generic/oberdiek\kvsetkeys.sty"
+("C:\Users\Alejandro\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\kvs
+etkeys.sty"
 Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
 
-("C:\Program Files\MiKTeX 2.9\tex/generic/oberdiek\etexcmds.sty"
+("C:\Users\Alejandro\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\ete
+xcmds.sty"
 Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
 
-("C:\Program Files\MiKTeX 2.9\tex/generic/oberdiek\ifluatex.sty"
+("C:\Users\Alejandro\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\ifl
+uatex.sty"
 Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
 ))))
-("C:\Program Files\MiKTeX 2.9\tex/generic/oberdiek\pdftexcmds.sty"
+("C:\Users\Alejandro\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\pdf
+texcmds.sty"
 Package: pdftexcmds 2018/09/10 v0.29 Utility functions of pdfTeX for LuaTeX (HO
 )
 Package pdftexcmds Info: LuaTeX not detected.
@@ -445,17 +503,20 @@ Package caption Info: End \AtBeginDocument code.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 LaTeX Font Info:    Try loading font information for U+msa on input line 53.
-("C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\umsa.fd"
+
+("C:\Users\Alejandro\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsa.
+fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 53.
 
-("C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd"
+("C:\Users\Alejandro\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsb.
+fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Try loading font information for U+lasy on input line 53.
 
-("C:\Program Files\MiKTeX 2.9\tex/latex/base\ulasy.fd"
+("C:\Users\Alejandro\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\ulasy.fd"
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
 
@@ -463,7 +524,7 @@ LaTeX Warning: Characters dropped after `\end{comment}' on input line 132.
 
 [1
 
-{C:/Users/KEVINSTEVEN/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+{C:/Users/Alejandro/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
 <FigurasUV/D1.pdf, id=17, 1027.84pt x 545.03625pt>
 File: FigurasUV/D1.pdf Graphic file (type pdf)
 <use FigurasUV/D1.pdf>
@@ -483,41 +544,94 @@ File: FigurasUV/H1.pdf Graphic file (type pdf)
 Package pdftex.def Info: FigurasUV/H1.pdf  used on input line 250.
 (pdftex.def)             Requested size: 359.74939pt x 190.76555pt.
  [4 <./FigurasUV/H1.pdf>]
+<FigurasUV/P2.png, id=47, 307.1475pt x 146.04562pt>
+File: FigurasUV/P2.png Graphic file (type png)
+<use FigurasUV/P2.png>
+Package pdftex.def Info: FigurasUV/P2.png  used on input line 308.
+(pdftex.def)             Requested size: 153.57336pt x 73.02261pt.
+
+[5 <./FigurasUV/P2.png>]
+<FigurasUV/D2.pdf, id=51, 505.89pt x 426.59375pt>
+File: FigurasUV/D2.pdf Graphic file (type pdf)
+<use FigurasUV/D2.pdf>
+Package pdftex.def Info: FigurasUV/D2.pdf  used on input line 347.
+(pdftex.def)             Requested size: 252.94437pt x 213.29634pt.
+ [6 <./FigurasUV/D2.pdf>]
+<FigurasUV/HyQ2.pdf, id=59, 505.89pt x 435.6275pt>
+File: FigurasUV/HyQ2.pdf Graphic file (type pdf)
+<use FigurasUV/HyQ2.pdf>
+Package pdftex.def Info: FigurasUV/HyQ2.pdf  used on input line 385.
+(pdftex.def)             Requested size: 177.06415pt x 152.47191pt.
+ [7 <./FigurasUV/HyQ2.pdf>]
+<FigurasUV/P4.png, id=69, 433.62pt x 165.61874pt>
+File: FigurasUV/P4.png Graphic file (type png)
+<use FigurasUV/P4.png>
+Package pdftex.def Info: FigurasUV/P4.png  used on input line 437.
+(pdftex.def)             Requested size: 216.80946pt x 82.80916pt.
+
+[8]
+<FigurasUV/H4.pdf, id=73, 505.89pt x 417.56pt>
+File: FigurasUV/H4.pdf Graphic file (type pdf)
+<use FigurasUV/H4.pdf>
+Package pdftex.def Info: FigurasUV/H4.pdf  used on input line 488.
+(pdftex.def)             Requested size: 252.94437pt x 208.77948pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<FigurasUV/I4.pdf, id=74, 505.89pt x 406.51875pt>
+File: FigurasUV/I4.pdf Graphic file (type pdf)
+<use FigurasUV/I4.pdf>
+Package pdftex.def Info: FigurasUV/I4.pdf  used on input line 494.
+(pdftex.def)             Requested size: 252.94437pt x 203.25887pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[9 <./FigurasUV/P4.png>] [10 <./FigurasUV/H4.pdf> <./FigurasUV/I4.pdf>]
+<FigurasUV/HyQ4.pdf, id=88, 505.89pt x 470.75874pt>
+File: FigurasUV/HyQ4.pdf Graphic file (type pdf)
+<use FigurasUV/HyQ4.pdf>
+Package pdftex.def Info: FigurasUV/HyQ4.pdf  used on input line 535.
+(pdftex.def)             Requested size: 177.06415pt x 164.76802pt.
+
+[11 <./FigurasUV/HyQ4.pdf>]
 No file Informe.bbl.
-[5] (Informe.aux
+[12] [13] (Informe.aux
 LaTeX Info: Redefining \. on input line 6.
 LaTeX Info: Redefining \% on input line 6.
 ) ) 
 Here is how much of TeX's memory you used:
- 5964 strings out of 492946
- 83881 string characters out of 3135510
- 176276 words of memory out of 3000000
- 9724 multiletter control sequences out of 15000+200000
+ 6005 strings out of 492946
+ 87639 string characters out of 3124490
+ 175278 words of memory out of 3000000
+ 9757 multiletter control sequences out of 15000+200000
  18900 words of font info for 57 fonts, out of 3000000 for 9000
  1145 hyphenation exceptions out of 8191
  43i,8n,40p,1040b,376s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\KEVINSTEVEN\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/
-dpi600\ecti0900.pk> <C:\Users\KEVINSTEVEN\AppData\Local\MiKTeX\2.9\fonts/pk/ljf
-our/jknappen/ec/dpi600\ecrm0800.pk> <C:\Users\KEVINSTEVEN\AppData\Local\MiKTeX\
-2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0600.pk> <C:\Users\KEVINSTEVEN\AppDa
-ta\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1000.pk> <C:\Users\K
-EVINSTEVEN\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000
-.pk> <C:\Users\KEVINSTEVEN\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec
-/dpi600\ecrm0700.pk> <C:\Users\KEVINSTEVEN\AppData\Local\MiKTeX\2.9\fonts/pk/lj
-four/jknappen/ec/dpi600\eccc1000.pk> <C:\Users\KEVINSTEVEN\AppData\Local\MiKTeX
-\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\KEVINSTEVEN\AppD
-ata\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0900.pk> <C:\Users\
-KEVINSTEVEN\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx090
-0.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:
-/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program 
-Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiK
-TeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fo
-nts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
-1/public/amsfonts/cm/cmsy5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
-amsfonts/cm/cmsy7.pfb>
-Output written on Informe.pdf (5 pages, 174689 bytes).
+ <C:\Users\Alejandro\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dp
+i600\ecti0900.pk> <C:\Users\Alejandro\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/
+jknappen/ec/dpi600\ecrm0800.pk> <C:\Users\Alejandro\AppData\Local\MiKTeX\2.9\fo
+nts/pk/ljfour/jknappen/ec/dpi600\ecrm0600.pk> <C:\Users\Alejandro\AppData\Local
+\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1000.pk> <C:\Users\Alejandro
+\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\U
+sers\Alejandro\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm
+0700.pk> <C:\Users\Alejandro\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/
+ec/dpi600\eccc1000.pk> <C:\Users\Alejandro\AppData\Local\MiKTeX\2.9\fonts/pk/lj
+four/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\Alejandro\AppData\Local\MiKTeX\2
+.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0900.pk> <C:\Users\Alejandro\AppData\
+Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx0900.pk><C:/Users/Aleja
+ndro/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pf
+b><C:/Users/Alejandro/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsf
+onts/cm/cmmi7.pfb><C:/Users/Alejandro/AppData/Local/Programs/MiKTeX 2.9/fonts/t
+ype1/public/amsfonts/cm/cmr10.pfb><C:/Users/Alejandro/AppData/Local/Programs/Mi
+KTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Alejandro/AppData/Lo
+cal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Ale
+jandro/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy5.p
+fb><C:/Users/Alejandro/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/ams
+fonts/cm/cmsy7.pfb>
+Output written on Informe.pdf (13 pages, 238587 bytes).
 PDF statistics:
- 340 PDF objects out of 1000 (max. 8388607)
+ 396 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 51 words of extra memory for PDF output out of 10000 (max. 10000000)
 
